@@ -1,0 +1,26 @@
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:  0.052vw solid #D6BA8D;
+
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size:  0.938vw;
+    letter-spacing: 0.08em;
+    color: #FFFFFF;
+    text-align: center;
+
+    transition: .8s;
+}
+
+.button:hover{
+    color: #333333;
+    background: #D6BA8D;
+}
+
+.button:active{
+    border:  0.052vw solid #D6BA8D;
+    background: rgba(214, 186, 141, 0.8);
+}

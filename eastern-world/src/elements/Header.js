@@ -14,7 +14,7 @@ const Header = () => {
 
     return (
         <header>
-            <a href="" className = 'logo'></a>
+            <a href="http://localhost:3000/" className = 'logo'></a>
             <nav>
                 <a className = 'active' href="http://localhost:3000/">ГЛАВНАЯ</a>
                 <a href="http://localhost:3000/">БИОГРАФИЯ</a>

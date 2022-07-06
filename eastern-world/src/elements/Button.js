@@ -3,7 +3,7 @@ import "./button.css"
 
 const Button = ({content, w ,h}) => {
     return (
-        <div className = "button" style = {{ width : w, height: h}}>{content}</div>
+        <a href="http://localhost:3000/" className = "button" style = {{ width : w, height: h}}>{content}</a>
     );
 }
 

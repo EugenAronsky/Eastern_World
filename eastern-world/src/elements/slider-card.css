@@ -1,0 +1,138 @@
+.SliderCard{
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/photo.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.SliderCardMask{
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    background: #000000CC;
+}
+
+.SliderCard > h1{
+    position: absolute;
+    width: 37.188vw;
+    margin-left: 42.6vw;
+    margin-top: 5.208vw;
+
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 5vw;
+    line-height: 5.677vw;
+    text-align: right;
+    color: #FFFFFF;
+}
+
+.SliderCard > h1 :last-of-type{
+    color: #D6BA8D;
+}
+
+.SmallText{
+    position: absolute;
+    width: 48.594vw;
+    margin-left: 20.417vw;
+    margin-top: 19.688vw;
+
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.667vw;
+    line-height: 1.875vw;
+
+    color: #FFFFFF;
+}
+
+.SmallText::before{
+    content: "";
+    height: 100%;
+    position: absolute;
+    background: #D6BA8D;
+    margin-left: -2.083vw;
+    border: 0.052vw solid #D6BA8D;
+}
+
+.slidButton {
+    position: absolute;
+    margin-top: 34.115vw;
+    margin-left: 69.219vw;
+}
+
+.SliderFooter{
+    width: 100vw;
+    height: 7.448vw;
+    margin-top: 40.260vw;
+    position: absolute;
+    border-top: 0.052vw solid rgba(255, 255, 255, 0.3);
+
+    display: flex;
+    align-items: center;
+}
+
+.Author{
+    position: absolute;
+    margin-left: 18.281vw;
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.667vw;
+    line-height: 1.875vw;
+    color: #FFFFFF;
+}
+
+.published-date{
+    width: 10.521vw;
+    position: absolute;
+    margin-left: 46.458vw;
+    font-family: 'Exo 2', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 0.938vw;
+    line-height: 1.146vw;
+
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.published-date::before{
+    content: "";
+    height: 2.292vw;
+    position: absolute;
+    margin-left: -1.0415vw;
+    border: 0.026vw solid rgba(255, 255, 255, 0.6);
+}
+
+.publisher{
+    width: 10.521vw;
+    position: absolute;
+    margin-left: 62.708vw;
+    font-family: 'Exo 2', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 0.938vw;
+    line-height: 1.146vw;
+
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.publisher::before{
+    content: "";
+    height: 2.292vw;
+    position: absolute;
+    margin-left: -1.0415vw;
+    border: 0.026vw solid rgba(255, 255, 255, 0.6);
+}
+
+.publisher > a{
+    font-family: 'Exo 2', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 0.938vw;
+    line-height: 1.146vw;
+
+    color: rgba(255, 255, 255, 0.8);
+}

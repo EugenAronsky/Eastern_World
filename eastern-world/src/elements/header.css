@@ -6,6 +6,9 @@ header {
     border-bottom:  0.052vw #6C6C6C solid;
     display: flex;
     align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 2;
 }
 
 .logo{

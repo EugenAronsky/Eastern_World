@@ -3,7 +3,6 @@ footer {
     height: 18.333vw;
     background: #262626;
     position: absolute;
-    bottom: 0;
     display: flex;
     justify-content: center;
     align-items: center;

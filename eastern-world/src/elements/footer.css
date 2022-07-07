@@ -64,6 +64,7 @@ footer {
     height: 1.510vw;
     display: flex;
     justify-content: space-between;
+    cursor: pointer;
 }
 
 .upSide :last-child > div > span{

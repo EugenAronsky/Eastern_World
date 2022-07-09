@@ -8,10 +8,6 @@ async function getUpdate(){
 
   await client.getEntries().then((Data)=>{
 
-    const Foote = Data.items[0].sys.contentType.sys.id;
-
-    console.log(Data.items);
-
     const root = ReactDOM.createRoot(document.getElementById('root'));
     root.render(
       <React.StrictMode>

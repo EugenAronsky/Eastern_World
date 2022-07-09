@@ -3,17 +3,40 @@ import Header from './Header.js';
 import HomePage from './HomePage.js';
 import Footer from './Footer.js';
 import Slider from './Slider.js';
+import Biography from './Biography.js'
 
 const base_values = {
 
-    Header:{
+    header:{
   
     },
+
+    biography:{
+        
+        portrait: {
+            fields :{
+                file:{
+                    url: "default"
+                }
+            }
+        },
+        author: "Влада Гольдштейн",
+        profession: "журналист / публицист / геополитолог",
+        description: "Освещала военные операции Израиля против террористов «Исламского джихада» и ХАМАС: 2019г. – «Чёрный пояс». 2021г. – «Страж стен». Свидетель текущей Украинской войны. Находилась на Востоке Украины во время начала полномасштабных военных действий.\n\nСотрудничество со СМИ:\nНастоящее время: израильский аналитический журнал «Исрагео» и еженедельник «Секрет».",
+        background_iamge: {
+            fields :{
+                file:{
+                    url: "default"
+                }
+            }
+        },
+
+    },
     
-    Footer:{
-        mail:"contact@gmail.com",
+    footer:{
+        mail: "contact@gmail.com",
         termsOfUse: "",
-        copyright: "qaw"
+        copyright: "Все права защищены © 2022 Eastern World"
     }
   
 }
@@ -22,7 +45,7 @@ function findMyData(name, data){
     for (let index = 0; index < data.length; index++) {
         if(data[index].sys.contentType.sys.id === name) return data[index].fields;
     }
-    return base_values.Footer;
+    return base_values[name];
 }
 
 const App = ({newData}) => {
@@ -31,6 +54,7 @@ const App = ({newData}) => {
         <Header/>
             <HomePage>
                 <Slider/>
+                <Biography upDate = {findMyData('biography', newData)}/>
             </HomePage>
         <Footer upDate = {findMyData('footer', newData)}/>
     </div>

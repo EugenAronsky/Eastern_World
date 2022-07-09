@@ -1,6 +1,6 @@
 import React from 'react';
-import "./footer.css"
 import Button from "./Button.js"
+import "./footer.css"
 
 
 

@@ -1,0 +1,98 @@
+.Biography{
+    width: 100%;
+    height: 39.583vw;
+
+    background-image: url("../img/bio-bg.png");
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.Biography::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #262626 0%, #333333 5.21%, #333333 46.35%, #333333 94.78%, #262626 100%);
+    mix-blend-mode: soft-light;
+    filter: brightness(.7);
+}
+
+.Bio-portret{
+    position: absolute;
+    width: 21.146vw;
+    height: 32.292vw;
+    margin-left: 19.323vw;
+    margin-top: 3.125vw;
+    
+    background: url("../img/bio-photo.png");
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    filter: drop-shadow(0px 0.521vw 1.042vw rgba(0, 0, 0, 0.5));
+}
+
+.Bio-portret-back{
+    width: 21.146vw;
+    height: 28.438vw;
+    margin-left: 18.281vw;
+    margin-top: 8.021vw;
+    position: absolute;
+    background: #D6BA8D;
+}
+
+.Bio-description{
+    width: 36.354vw;
+    height: 24.010vw;
+    position: absolute;
+    margin-left: 45.365vw;
+    margin-top: 8.750vw;
+
+    display: flex;
+    flex-direction: column;
+    white-space: pre-line;
+}
+
+.Bio-description > h1{
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3.333vw;
+    line-height: 3.802vw;
+    color: #D6BA8D;
+}
+
+.Bio-description > h1::before{
+    content: '';
+    position: absolute;
+    background: #D6BA8D;
+    width: 9.271vw;
+    height: 0.052vw;
+    margin-top: -1.302vw;
+}
+
+.Bio-description > h2{
+    font-family: 'Exo 2', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.250vw;
+    line-height: 1.510vw;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 0.521vw;
+    margin-bottom: 1.563vw;
+}
+
+.Bio-description > span{
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.250vw;
+    line-height: 120%;
+    color: #FFFFFF; 
+}
+
+.Bio-button{
+    position: absolute;
+    margin-left: 68.177vw;
+    margin-top: 33.333vw;
+}

@@ -5,14 +5,14 @@ import "./footer.css"
 
 
 const Footer = (upDate) =>{    
-    let {copyright, mail, termsOfUse} = upDate.upDate
+    let {copyright, mail, termsOfUse} = upDate.upDate;
     return (
         <footer>
             <div className = 'footer-container'>
                 <div className='upSide'>
                     <div>
                         <span>Условия пользования</span>
-                        <Button content="ПРОЧЕСТЬ" w = "12.500vw" h = "3.125vw" link={termsOfUse}/>
+                        <Button content="ПРОЧЕСТЬ" width = "12.500vw" height = "3.125vw" link={termsOfUse}/>
                     </div>
                     <div className='secondEl'>
                         <span>Контакты</span>

@@ -1,9 +1,9 @@
 import React from "react";
 import "./button.css"
 
-const Button = ({content, w ,h, link}) => {
+const Button = ({content, width ,height, link, target = "_self"}) => {
     return (
-        <a href={link} className = "button" style = {{ width : w, height: h}}>{content}</a>
+        <a href={link} target = {target} className = "button" style = {{ width : width, height: height}}>{content}</a>
     );
 }
 

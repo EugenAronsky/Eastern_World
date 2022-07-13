@@ -12,10 +12,20 @@
     content: '';
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 39.583vw;
     background: linear-gradient(180deg, #262626 0%, #333333 5.21%, #333333 46.35%, #333333 94.78%, #262626 100%);
     mix-blend-mode: soft-light;
     filter: brightness(.7);
+}
+
+.Biography::after{
+    content: '';
+    width: 100%;
+    height: 39.583vw;
+    position: absolute;
+    background: #262626;
+    opacity: .5;
+    z-index: -1;
 }
 
 .Bio-portret{

@@ -1,0 +1,70 @@
+@media only screen and (max-width: 540px) {
+    footer{
+        height: 40.625vw;
+    }
+
+    .footer-container{
+        width: 100%;
+    }
+    .upSide{
+        width: calc( 100% - (6.250vw * 2));
+        padding: 6.250vw;
+    }
+
+    .upSide :first-child{
+        width: auto;
+        height: auto;
+    }
+
+    .upSide :first-child > span{
+        font-size: 3.125vw;
+        line-height: 3.438vw;
+        margin-bottom: 3.053vw;
+    }
+    .upSide :first-child > .button > div{
+        font-size: 3.125vw;
+        height: auto;
+    }
+
+    .upSide :last-child{
+        width: 39.063vw;
+        height: 12.500vw;
+    }
+
+    .upSide :last-child > span{
+        font-family: 'Georgia';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 3.125vw;
+        line-height: 3.438vw;
+        letter-spacing: 0.08em;
+        color: #FFFFFF;
+    }
+
+    .upSide :last-child > div > span{
+        height: auto;
+        font-family: 'Exo 2.0';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 3.125vw;
+        line-height: 3.750vw;
+        letter-spacing: 0.08em;
+        color: #848484;
+    }
+
+    #postIcon{
+        width: 5.250vw;
+        height: 5.250vw;
+        margin-right: 1.875vw;
+    }
+
+    .WaterMark{
+        font-size: 3.125vw;
+        line-height: 3.438vw;
+        margin-left: 6.250vw;
+    }
+
+    .line{
+        margin-bottom: 3.125vw;
+    }
+}

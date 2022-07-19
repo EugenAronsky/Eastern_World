@@ -1,0 +1,63 @@
+@media only screen and (max-width: 540px) {
+    .Biography{
+        background-size: 300% 100% ;
+    }
+
+    .Biography, .Biography::before, .Biography::after{
+        height: 177.500vw;
+    }
+
+    .Bio-portret-back{
+        width: 41.494vw;
+        height: 55.703vw;
+        margin-left: 25vw;
+        margin-top: 19.297vw;
+    }
+
+    .Bio-portret{
+        width: 41.494vw;
+        height: 63.369vw;
+        margin-top: 9.375vw;
+        margin-left: 27.256vw;
+    }
+    
+    .Bio-description{
+        width: 87.500vw;
+        margin-left: 6.250vw;
+        margin-top: 78.125vw;
+    }
+
+    .Bio-description > h1{
+        font-size: 7.500vw;
+        line-height: 8.438vw;
+        margin-bottom: 6.563vw;
+        text-align: center;
+    }
+
+    .Bio-description > h1::before{
+        display: none;
+    }
+
+    .Bio-description::before{
+        content: '';
+        width: 87.500vw;
+        height: 0.052vw;
+        position: absolute;
+        background: #D6BA8D;
+        margin-top: 11.563vw;
+    }
+
+    .Bio-description > h2{
+        font-size: 3.125vw;
+        line-height: 3.750vw;
+    }
+
+    .Bio-description > span{
+        font-size: 3.750vw;
+    }
+
+    .Bio-button{
+        margin-left: 6.250vw;
+        margin-top: 158.750vw;
+    }
+}

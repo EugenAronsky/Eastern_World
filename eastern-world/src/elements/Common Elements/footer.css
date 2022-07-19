@@ -1,0 +1,105 @@
+footer {
+    width: 100%;
+    height: 18.333vw;
+    background: #262626;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-container{
+    width: 63.4%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.upSide{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.upSide :first-child{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.upSide :first-child > span{
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.667vw;
+    line-height: 1.875vw;
+    letter-spacing: 0.08em;
+    color: #D6BA8D;
+    margin-bottom: 1.563vw;
+}
+
+.secondEl{
+    width: 15.573vw;
+    height: 5.104vw;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.upSide :last-child > span{
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.667vw;
+    line-height: 1.875vw;
+    letter-spacing: 0.08em;
+    color: #FFFFFF;
+}
+
+.upSide :last-child > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.upSide :last-child > div > span{
+    height: 1.510vw;
+    font-family: 'Exo 2.0';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.250vw;
+    line-height: 1.510vw;
+    letter-spacing: 0.08em;
+    color: #848484;
+}
+
+#postIcon{
+    width: 1.667vw;
+    height: 1.667vw;
+    background-image: url("../img/Subtract.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 90%;
+}
+
+.line{
+    width: 100%;
+    height:  0.052vw;
+    margin-top: 1.563vw;
+    margin-bottom: 1.563vw;
+    background: #848484;
+}
+
+.WaterMark{
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.250vw;
+    line-height: 1.406vw;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.08em;
+    color: #848484;
+}

@@ -1,0 +1,40 @@
+@media only screen and (max-width: 540px) {
+    .Help{
+        background-image: url("../img/help-s-bg.png");
+        background-size: cover;
+    }
+
+    .Help, .Help::before, .Help::after{
+        height: 165vw;
+    }
+
+    .Help > h1{
+        width: 40.625vw;
+        font-size: 8.750vw;
+        line-height: 10vw;
+        margin-left: 6.250vw;
+        margin-top: 9.375vw;
+    }
+
+    .underline{
+        width: 100vw;
+        height: 18.438vw;
+        margin-left: 0vw;
+        margin-top: 30vw;
+        background-image: url("../img/s-underline.png");
+    }
+
+    .Help > span{
+        width: 87.500vw;
+        height: 80vw;
+        font-size: 4.375vw;
+        text-align: start;
+        margin-left: 6.250vw;
+        margin-top: 55vw;
+    }
+
+    .Help > .help-button{
+        margin-left: 6.250vw;
+        margin-top: 146.250vw;
+    }
+}   

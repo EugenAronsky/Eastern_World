@@ -1,0 +1,30 @@
+@media only screen and (max-width: 540px) {
+    .SliderBox{
+        height: 158.750vw;
+        margin-top: 18.7vw;
+    }
+
+    .selection{
+        width: 30.938vw;
+        height: 2.500vw;
+        margin-top: 150vw;
+        margin-left: 34.375vw;
+        flex-direction: row;
+    }
+
+    .selection-not-active{
+        width: 0;
+        height: 0;
+        border-radius: 100%;
+        border: 0.85vw solid #ffffff;
+        background: #ffffff;
+    }
+    
+    
+    .selection-active{
+        width: 0.85vw;
+        height: 0.85vw;
+        border-radius: 100%;
+        border: 0.4vw solid #ffffff;
+    }
+}

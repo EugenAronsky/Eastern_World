@@ -1,0 +1,44 @@
+@media only screen and (max-width: 540px) {
+    .Portfolio{
+        background-size: 400% 100%;
+    }
+    
+    .Portfolio, .Portfolio::before , .Portfolio::after{
+        height: 176.875vw;
+    }
+    
+    .Portfolio > h1{
+        font-size: 8.750vw;
+        line-height: 10vw;
+        margin-top: 9.375vw;
+        margin-left: 6.250vw;
+    }
+
+    .portfolio-button{
+        margin-top: 157.813vw;
+        margin-left: 6.250vw;
+    }
+
+    .portfolio-card-box{
+        width: 100vw;
+        height: 118.438vw;
+        margin-top: 25.625vw;
+        margin-left: 0;
+        overflow: hidden;
+    }
+
+    .portfolio-slider{
+        width: calc((87.500vw * 3) + (6.250vw * 3));
+        height: 118.438vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: unset;
+        transition: 1s;
+    }
+}
+
+@media only screen and (min-width: 541px) {
+    .Portfolio > .selection{
+        display: none;
+    }
+}

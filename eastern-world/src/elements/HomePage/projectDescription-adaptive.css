@@ -1,0 +1,43 @@
+@media only screen and (max-width: 540px) {
+    .ProjectDescription{
+        background-size: cover;
+
+    }
+
+    .ProjectDescription, .ProjectDescription::before{
+        height: 177.500vw;
+    }
+
+    .pd-container, .pd-container::before, .contoiner{
+        width: 87.500vw;
+    }
+
+    .pd-container::before{
+        margin-top: 9.375vw;
+    }
+
+    .contoiner{
+        white-space: pre-line;
+        margin-top: 81.875vw;
+    }
+
+    .contoiner > h1{
+        font-size: 8.750vw;
+        line-height: 10vw;
+    }
+
+    .contoiner > span{
+        font-size: 3.750vw;
+    }
+
+    .progect-image{
+        width: 87.500vw;
+        height: 62.500vw;
+        margin-top: 15.938vw;
+        margin-left: 0;
+    }
+
+    .pd-button{
+        margin-top: 158.750vw;
+    }
+}

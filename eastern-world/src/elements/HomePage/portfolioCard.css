@@ -1,0 +1,96 @@
+.PortfolioCard{
+    width: 20.104vw;
+    height: 30.417vw;
+    background: #212121;
+}
+
+.PortfolioCard > h1{
+    margin: 1.042vw;
+    position: absolute;
+    font-family: 'Gelasio', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.042vw;
+    line-height: 1.302vw;
+    color: #FFFFFF;
+}
+
+
+.PortfolioCard > span{
+    position: absolute;
+    margin-top: 3.333vw;
+    margin-left: 1.042vw;
+    margin-right: 1.042vw;
+    font-family: 'Exo 2', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 0.938vw;
+    line-height: 1.146vw;
+    color: #D6BA8D;
+}
+
+.cardImg{
+    width: 18.021vw;
+    height: 9.896vw;
+    position: absolute;
+    margin-top: 5.469vw;
+    margin-left: 1.042vw;
+    margin-right: 1.042vw;
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.cardDescription{
+    display: -webkit-box;
+    width: 18.021vw;
+    position: absolute;
+    margin-top: 16.406vw;
+    margin-left: 1.042vw;
+    margin-right: 1.042vw;
+
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.833vw;
+    line-height: 130%;
+    color: #FFFFFF;
+
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    white-space: pre-line;
+    -webkit-line-clamp: 9;
+    -webkit-box-orient: vertical;
+}
+
+.PortfolioCard > a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 20.104vw;
+    height: 3.125vw;
+    position: absolute;
+    margin-top: 27.292vw;
+    border-top: 0.052vw #D6BA8D solid;
+    border-bottom: 0.052vw #D6BA8D solid;
+    transition: .8s;
+
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.938vw;
+    line-height: 1.042vw;
+    letter-spacing: 0.08em;
+
+    color: #D6BA8D;
+}
+
+.PortfolioCard > a:hover{
+    background: #D6BA8D;
+    color: #333333;
+}
+
+.PortfolioCard > a:active{
+    background: #B59F7B;
+}

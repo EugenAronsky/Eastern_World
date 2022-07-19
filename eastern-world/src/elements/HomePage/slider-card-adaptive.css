@@ -1,0 +1,70 @@
+@media only screen and (max-width: 540px) {
+    .SliderCard > h1{
+        width: 65.313vw;
+        height: 20vw;
+        margin-top: 12.500vw;
+        margin-left: 28.438vw;
+        font-size: 8.750vw;
+        line-height: 10vw;
+    }
+
+    .SmallText{
+        width: 84.063vw;
+        font-size: 3.750vw;
+        line-height: 4.375vw;
+        margin-left: 9.688vw;
+        margin-top: 48.125vw;
+    }
+
+    .SmallText::before{
+        margin-left: -3.125vw;
+    }
+
+    .SliderFooter{
+        margin-top: 125vw;
+        align-items: unset;
+    }
+
+    .Author{
+        margin-top: 2.813vw;
+        margin-left: 6.250vw;
+        font-size: 4.375vw;
+        line-height: 5vw;
+    }
+
+    .published-date{
+        width: 38.750vw;
+        margin-top: 10.938vw;
+        margin-left: 9.375vw;
+        font-size: 3.125vw;
+        line-height: 3.750vw;
+    }
+
+    .published-date::before{
+        height: 7.500vw;
+        margin-left: -3.125vw;
+    }
+
+    .publisher{
+        width: 38.750vw;
+        margin-top: 10.938vw;
+        margin-left: 56.563vw;
+        font-size: 3.125vw;
+        line-height: 3.750vw;
+    }
+
+    .publisher::before{
+        height: 7.500vw;
+        margin-left: -3.125vw;
+    }
+
+    .publisher > a{
+        font-size: 3.125vw;
+        line-height: 3.750vw;
+    }
+
+    .slidButton{
+        margin-top: 109.375vw;
+        margin-left: 56.250vw;
+    }
+}

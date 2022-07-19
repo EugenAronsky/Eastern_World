@@ -1,0 +1,44 @@
+@media only screen and (max-width: 540px) {
+    .PortfolioCard{
+        width: 87.500vw;
+        height: 118.438vw;
+        margin-left: 6.250vw;
+    }
+
+    .PortfolioCard > h1{
+        font-size: 3.750vw;
+        line-height: 4.688vw;
+        margin-left: 6.250vw;
+        margin-top: 6.250vw;
+    }
+
+    .PortfolioCard > span{
+        font-size: 3.125vw;
+        line-height: 3.750vw;
+        margin-left: 6.250vw;
+        margin-top: 13.750vw;
+    }
+
+    .cardImg{
+        width: 75vw;
+        height: 40.625vw;
+        margin-left: 6.250vw;
+        margin-top: 23.438vw;
+    }
+
+    .cardDescription{
+        width: 75vw;
+        font-size: 3.125vw;
+        margin-left: 6.250vw;
+        margin-top: 70.313vw;
+    }
+
+    .PortfolioCard > a{
+        width: 87.500vw;
+        height: 9.375vw;
+        margin-top: 108.55vw;
+        font-size: 3.750vw;
+        line-height: 4.375vw;
+    }
+
+}

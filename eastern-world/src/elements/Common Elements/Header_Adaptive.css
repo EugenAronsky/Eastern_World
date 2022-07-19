@@ -1,0 +1,145 @@
+@media only screen and (max-width: 540px) {
+    header { 
+        width: calc(100% + 2px);
+        height: 18.750vw;
+        top: -1px;
+        left: -1px;
+    }
+    .logo{
+        width: 23.750vw;
+        height: 10.625vw;
+        margin-left: 6.250vw;
+    }
+
+    header > nav{
+        display: none;
+    }
+
+    .additional_options{
+        width: 8.125vw;
+        height: 2.292vw;
+        right: 6.875vw;
+    }
+
+    .langIcon{
+        display: none;
+    }
+    
+    .searchIcon{
+        display: none;
+    }
+
+    .burgerMenuIcon{
+        width: 8.125vw;
+        height: 5vw;
+    }
+
+    .iconBoxLine{
+        display: none;
+    }
+
+    .Icon{
+        width: 8.125vw;
+        height: 5vw;
+        margin:  2.500vw 0.938vw  2.500vw 0.938vw;
+    }
+
+    .burgerMenuOpen{
+        top: -8vw;
+        right: -6.875vw;
+        width: 102vw;
+        height: 177.500vw;
+        display: flex;
+        position: absolute;
+        align-items: flex-end;
+        flex-direction: column;
+        background: rgba(51, 51, 51, 0.8);
+        box-shadow: 0.104vw 0.104vw 1.042vw rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(1.042vw);
+        transition: 1s;
+    }
+
+    .burgerMenuClose{
+        top: -8vw;
+        right: -6.875vw;
+        width: 100vw;
+        height: 0;
+        display: flex;
+        position: absolute;
+        align-items: flex-end;
+        flex-direction: column;
+        background: rgba(51, 51, 51, 0.8);
+        box-shadow: 0.104vw 0.104vw 1.042vw rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(1.042vw);
+        transition: 1s;
+        opacity: 0;
+    }
+
+    .burgerMenu > div {
+        display: flex;
+        width: 64.375vw;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 4.19vw;
+        margin-bottom: 10.625vw;
+        margin-right: 4.775vw;
+    }
+
+    .iconMenuBox > .langIcon{
+        display: block;
+    }
+    
+    .iconMenuBox > .searchIcon{
+        display: block;
+    }
+
+    .burgerMenu > * {
+        margin-top: 6.250vw;
+        margin-bottom: 6.250vw;
+        margin-right: 6.875vw;
+        font-family: 'Georgia';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 5.625vw;
+        line-height: 6.250vw;
+        text-align: right;
+        letter-spacing: 0.08em;
+        color: #FFFFFF;
+    }
+
+    .A-line::after {
+        content: '';
+        width: 100%;
+        pointer-events: none;
+        border-bottom:  0.313vw solid #393939;
+        margin-top: -6.250vw;
+        position: absolute;
+    }
+
+    .tg{
+        width: 9.375vw;
+        height: 9.375vw;
+    }
+}
+
+
+@media only screen and (max-height: 560px) {
+    .burgerMenu > * {
+        margin-bottom: 0vw;
+    }
+    .A-line::after {
+        margin-top: calc(-6.250vw / 2);
+    }
+    .tg{
+        margin-top: 20vw;
+    }
+}
+
+@media only screen and (min-height: 720px) and (max-height: 720px){
+    .burgerMenu > * {
+        margin-bottom: 0vw;
+    }
+    .A-line::after {
+        margin-top: calc(-6.250vw / 2);
+    }
+}

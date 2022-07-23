@@ -1,6 +1,18 @@
 body {
   margin: 0;
-  overflow-x: hidden;
+  overflow: hidden;
+  position: relative;
+  top: 0 !important;
+  height: auto !important;
+}
+
+#goog-gt-tt, .skiptranslate{
+	display: none !important;
+}
+
+.goog-text-highlight{
+	box-shadow: none;
+	background-color: transparent;
 }
 
 * {

@@ -81,7 +81,7 @@
     height: 10.417vw;
     position: absolute;
     margin-top: 11.094vw;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .q-box::-webkit-scrollbar {
@@ -107,7 +107,6 @@
 
 .q-slider > *{
     display: flex;
-    height: 10.417vw;
     position: absolute;
     transition: 1s;
 }

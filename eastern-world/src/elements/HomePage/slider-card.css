@@ -10,10 +10,11 @@
     background: #000000CC;
 }
 
-.SliderCard > h1{
+.SlideTitle{
     position: absolute;
-    width: 37.188vw;
-    margin-left: 42.6vw;
+    width: 60vw;
+    height: 11.354vw;
+    margin-left: 20.417vw;
     margin-top: 5.208vw;
 
     font-family: 'Georgia';
@@ -23,6 +24,9 @@
     line-height: 5.677vw;
     text-align: right;
     color: #FFFFFF;
+
+    display: flex;
+    justify-content: flex-end;
 }
 
 .SliderCard > h1 :last-of-type{

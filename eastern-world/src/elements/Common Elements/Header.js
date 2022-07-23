@@ -4,11 +4,18 @@ import "./header.css"
 import "./Header_Adaptive.css"
 
 const Header = () => {
-
+    const [lang, setLang] = useState("RU");
     const [isActive, setIsActive] = useState(false);
+    const language = localStorage.getItem("language") || "RU";
+    const [isActiveLang, setIsActiveLang] = useState(false);
 
     const handleClick = event => {
       setIsActive(current => !current);
+      if(!isActive && window.innerWidth <= 540) setIsActiveLang(false); 
+    }
+
+    const handleClickLang = event => {
+        setIsActiveLang(current => !current);
     };
 
     return (
@@ -23,8 +30,12 @@ const Header = () => {
             <div className = 'additional_options'>
                 <div className='iconBox'>
                     <div className='iconBoxLine'></div>
-                    <div className='Icon langIcon'></div>
-
+                    <div className='Icon langIcon' onClick={handleClickLang} translate="no" >{language}</div>
+                    <div className={isActiveLang ? 'langMenu langMenuOpen'  : 'langMenu langMenuClose' } >
+                        <div data-google-lang="ru" onClick={()=>{localStorage.setItem("language", "RU"); handleClickLang()}} className={ language === "RU" ? "langActive" : ""} translate="no" >RU</div>
+                        <div data-google-lang="en" onClick={()=>{localStorage.setItem("language", "EN"); handleClickLang()}} className={ language === "EN" ? "langActive" : ""} translate="no" >EN</div>
+                        <div data-google-lang="iw" onClick={()=>{localStorage.setItem("language", "HA"); handleClickLang()}} className={ language === "HA" ? "langActive" : ""} translate="no" >HA</div>
+                    </div>
                 </div>
                 <div className='iconBox'>
                     <div className='iconBoxLine'></div>
@@ -35,7 +46,12 @@ const Header = () => {
                     <div className='Icon burgerMenuIcon' onClick={handleClick}></div>
                     <nav className={isActive ? 'burgerMenuOpen burgerMenu' : 'burgerMenuClose burgerMenu'}>
                         <div className="iconMenuBox">
-                            <div className='Icon langIcon' ></div>
+                            <div className='Icon langIcon' onClick={handleClickLang} translate="no" >{language}</div>
+                                <div className={isActiveLang ? 'langMenu langMenuOpen'  : 'langMenu langMenuClose' } style={ isActive ? {} : {display: "none"}}>
+                                    <div data-google-lang="ru" onClick={()=>{localStorage.setItem("language", "RU"); handleClickLang()}} className={ language === "RU" ? "langActive" : ""} translate="no" >RU</div>
+                                    <div data-google-lang="en" onClick={()=>{localStorage.setItem("language", "EN"); handleClickLang()}} className={ language === "EN" ? "langActive" : ""} translate="no" >EN</div>
+                                    <div data-google-lang="iw" onClick={()=>{localStorage.setItem("language", "HA"); handleClickLang()}} className={ language === "HA" ? "langActive" : ""} translate="no" >HA</div>
+                                </div>
                             <div className='Icon searchIcon' ></div>
                             <div className='Icon burgerMenuIcon'  onClick={handleClick}></div>
                         </div>

@@ -11,8 +11,10 @@ const SliderCard = () =>{
     return (
         <div className="SliderCard">
             <div className="SliderCardMask"></div>
-            <h1>По ту сторону <span>континента</span></h1>
-            <div className="SmallText">Какие вызовы национальной безопасности несут особый риск и из-за чего повышается градус напряжённости в израильском <br></br>обществе сегодня?</div>
+            <div className="SlideTitle">
+                <h1>По ту сторону континента</h1>
+            </div>
+            <div className="SmallText">Какие вызовы национальной безопасности несут особый риск и из-за чего повышается градус напряжённости в израильском обществе сегодня?</div>
                 {screenWidth <= 540 ? <div className ="slidButton"><Button content="ПРОЧЕСТЬ" width = "37.500vw" height = "9.375vw"/></div> : <div className ="slidButton"><Button content="ПРОЧЕСТЬ" width = "12.500vw" height = "3.125vw"/></div>}
             <div className="SliderFooter">
                 <div className="Author">Влада Гольдштейн</div>

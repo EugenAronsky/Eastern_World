@@ -10,7 +10,7 @@ const Questions = ({upDate}) => {
     
     const [slide, setSlide] = useState(false);
     const [coefficient, setCoefficient] = useState(0);
-    const QuestionsList = upDate.map((upDate, index) => <div key={index} style={{transform : "translateX(" + index * 100 + "%)" }} >{UpdateManeger(upDate.question)}</div>);
+    const QuestionsList = upDate.map((upDate, index) => <div key={index} style={{transform : "translateX(" + index * 100 + "%)" }} >{ UpdateManeger(upDate.question).length > 300 ? UpdateManeger(upDate.question).slice(0, 300 - UpdateManeger(upDate.question).length ) + "...": UpdateManeger(upDate.question) }</div>);
     
     const PhoneQuestionsList = upDate.map((upDate, index) => 
         <div key={index} className='q-full-content'>

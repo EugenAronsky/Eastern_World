@@ -3,11 +3,14 @@ import {useState} from 'react';
 import "./header.css"
 import "./Header_Adaptive.css"
 
-const Header = () => {
-    const [lang, setLang] = useState("RU");
+const Header = ({upDate}) => {
+    const {logo} = upDate[0];
+    const changePageFunction = upDate[1];
+
     const [isActive, setIsActive] = useState(false);
-    const language = localStorage.getItem("language") || "RU";
     const [isActiveLang, setIsActiveLang] = useState(false);
+    const language = localStorage.getItem("language") || "RU";
+    const currentPage = localStorage.getItem("Current_Page") || "HomePage";
 
     const handleClick = event => {
       setIsActive(current => !current);
@@ -20,12 +23,12 @@ const Header = () => {
 
     return (
         <header>
-            <a href="http://localhost:3000/" className = 'logo'></a>
+            <a onClick={()=>changePageFunction("HomePage")} className = 'logo'></a>
             <nav>
-                <a className = 'active' href="http://localhost:3000/">ГЛАВНАЯ</a>
-                <a href="http://localhost:3000/">БИОГРАФИЯ</a>
-                <a href="http://localhost:3000/">ПОРТФОЛИО</a>
-                <a href="http://localhost:3000/">МЕРОПРИЯТИЯ</a>
+                <a onClick={()=>changePageFunction("HomePage")} className = {currentPage === "HomePage" ? 'active' : ''}>ГЛАВНАЯ</a>
+                <a onClick={()=>changePageFunction("BiographyPage")} className = {currentPage === "BiographyPage" ? 'active' : ''}>БИОГРАФИЯ</a>
+                <a >ПОРТФОЛИО</a>
+                <a >МЕРОПРИЯТИЯ</a>
             </nav>
             <div className = 'additional_options'>
                 <div className='iconBox'>
@@ -55,13 +58,13 @@ const Header = () => {
                             <div className='Icon searchIcon' ></div>
                             <div className='Icon burgerMenuIcon'  onClick={handleClick}></div>
                         </div>
-                        <a className={isActive ? 'show ' : 'hide'} href="">БИОГРАФИЯ</a>
-                        <a className={isActive ? 'show A-line' : 'hide'} href="">ПОРТФОЛИО</a>
-                        <a className={isActive ? 'show A-line' : 'hide'} href="">МЕРОПРИЯТИЯ</a>
-                        <a className={isActive ? 'show A-line' : 'hide'} href="">РЕКОМЕНДАЦИИ</a>
-                        <a className={isActive ? 'show A-line' : 'hide'} href="">ВОПРОС/ОТВЕТ</a>
-                        <a className={isActive ? 'show A-line' : 'hide'} href="">ПОМОЩЬ УКРАИНЕ</a>
-                        <a className={isActive ? 'show A-line' : 'hide'} href="">КОНТАКТЫ</a>
+                        <a className={isActive ? 'show ' : 'hide'} onClick={()=>changePageFunction("BiographyPage")}>БИОГРАФИЯ</a>
+                        <a className={isActive ? 'show A-line' : 'hide'} onClick={()=>changePageFunction("HomePage")}>ПОРТФОЛИО</a>
+                        <a className={isActive ? 'show A-line' : 'hide'} onClick={()=>changePageFunction("HomePage")}>МЕРОПРИЯТИЯ</a>
+                        <a className={isActive ? 'show A-line' : 'hide'} onClick={()=>changePageFunction("HomePage")}>РЕКОМЕНДАЦИИ</a>
+                        <a className={isActive ? 'show A-line' : 'hide'} onClick={()=>changePageFunction("HomePage")}>ВОПРОС/ОТВЕТ</a>
+                        <a className={isActive ? 'show A-line' : 'hide'} onClick={()=>changePageFunction("HomePage")}>ПОМОЩЬ УКРАИНЕ</a>
+                        <a className={isActive ? 'show A-line' : 'hide'} onClick={()=>changePageFunction("HomePage")}>КОНТАКТЫ</a>
                         <a className={isActive ? 'show tg' : 'hide tg'} target="blank" href="https://t.me/eastern_world"></a>
                     </nav>  
                 </div>

@@ -1,0 +1,107 @@
+@media only screen and (max-width: 540px) {
+
+    .FullBiography{
+        padding-top: 9.375vw;
+        padding-bottom: 9.375vw;
+    }
+
+    .FullBiography_Background{
+        margin-top: -9.375vw;
+    }
+
+    .full-bio-container{
+        width: 87.500vw;
+    }
+
+    .first-part-bio{
+        width: 87.500vw;
+        flex-direction: column;
+        justify-content: unset;
+    }
+
+    .Bio-bg-img{
+        height: 146.875vw;
+        background-size: cover;
+        background-position: center;
+    }
+    .FullBiography_Background::after{
+        height: 146.875vw;;
+    }
+
+    .Bio-bg{
+        box-shadow: 0 -50vw 20vw 5vw #333333ad, 0 -20vw 10vw 5vw #333333ad , 0 -5vw 5vw 0 #333333;
+    }
+    .Bio-bg::after{
+        box-shadow: 0 -40vw 20vw 5vw #333333ad, 0 -20vw 10vw 5vw #333333ad , 0 -5vw 5vw 0 #333333;
+    }
+
+    .first-part-bio > .Bio-portret-back{
+        width: 41.494vw;
+        height: 55.703vw;
+        margin-top: 9.922vw;
+        margin-left: 18.750vw;
+    }
+
+    .first-part-bio::before{
+        content: '';
+        position: absolute;
+        background: #D6BA8D;
+        width: 87.500vw;
+        height: 0.052vw;
+        margin-top: 80.313vw;
+    }
+
+    .first-part-bio > .Bio-portret{
+        width: 41.494vw;
+        height: 63.369vw;
+        position: relative;
+        margin-left: 21.006vw;
+    }
+
+    .Bio-description-box > .Bio-description{
+        height: auto;
+        margin-left: 0;
+        width: 87.500vw;
+        position: relative;
+    }
+
+    .Bio-description-box > .Bio-description > h1{
+        width: 87.500vw;
+        font-size: 7.500vw;
+        line-height: 8.438vw;
+        text-align: center;
+    }
+    .Bio-description-box > .Bio-description > h1::before{
+        display: none;
+    }
+    
+    .Bio-description-box > .Bio-description > h2{
+        margin-left: 0;
+        font-size: 3.125vw;
+        line-height: 3.750vw;
+        margin-top: 6.563vw;
+        margin-bottom: none;
+    }
+
+    .Bio-description-box  > .Bio-description > p{
+        margin-left: 0;
+        font-size: 3.750vw;
+        margin-top: 3.125vw;
+    }
+
+    .Bio-description-box {
+        margin-left: 0;
+        margin-top: 5.381vw;
+    }
+
+    .bio_info{
+        width: 87.500vw;
+        position: relative;
+        margin-top: 3.125vw;
+    }
+    
+    .bio_info > h1, .bio_info > div{
+        font-size: 3.750vw;
+        margin-bottom: 3.125vw;
+    }
+}

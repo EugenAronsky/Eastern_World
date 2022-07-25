@@ -1,0 +1,174 @@
+.FullBiography{
+    width: 100vw;
+    height: auto;
+    display: flex;
+    padding-top: 3.125vw;
+    padding-bottom: 3.125vw;
+    justify-content: center;
+}
+
+
+.FullBiography_Background{
+    width: 100vw;
+    display: flex;
+    height: 100%;
+    position: absolute;
+    margin-top: -3.125vw;
+    flex-direction: column;
+    z-index: -1;
+}
+
+.FullBiography_Background::after{
+    top: 0;
+    width: 100%;
+    content: '';
+    height: 47.760vw;
+    position: absolute;
+    background: linear-gradient(180deg, #00000090 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.Bio-bg-img{
+    width: 100vw;
+    height: 47.760vw;
+    background-size: 100% 100%;
+    background-image: url("../img/bio-full-bg.png");
+    background-repeat: no-repeat;
+    background-position: center -6vw;
+    filter: brightness(.5);
+    z-index: -2;
+}
+
+.Bio-bg-img::before{
+    width: 100%;
+    content: '';
+    height: 47.760vw;
+    position: absolute;
+}
+
+.Bio-bg{
+    width: 100%;
+    background: #333333;
+    height: calc( 100% - 41.760vw);
+    box-shadow: 0 -15vw 10vw 5vw #333333ad, 0 -10vw 10vw 5vw #333333ad , 0 -2vw 2vw 0 #333333;
+    margin-top: -6vw;
+    z-index: -1;
+}
+
+.Bio-bg::after{
+    z-index: -1;
+    content: '';
+    width: 100%;
+    box-shadow: 0 -25vw 10vw 10vw #333333ad, 0 -10vw 10vw 10vw #333333ad , 0 -5vw 5vw 0 #33333380;
+    height: calc( 100% - 41.760vw);
+    mix-blend-mode: soft-light;
+    margin-top: -6vw;
+}
+
+.full-bio-container{
+    width: 63.438vw;
+}
+
+.first-part-bio{
+    width: 63.438vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.first-part-bio > .Bio-portret-back{
+    width: 21.146vw;
+    height: 28.438vw;
+    margin-left: 0vw;
+    margin-top: 4.896vw;
+    position: absolute;
+    background: #D6BA8D;
+}
+
+.first-part-bio > .Bio-portret{
+    position: relative;
+    width: 21.146vw;
+    height: 32.292vw;
+    margin-left: 1.042vw;
+    
+    background: url("../img/bio-photo.png");
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    filter: drop-shadow(0px 0.521vw 1.042vw rgba(0, 0, 0, 0.5));
+}
+
+.Bio-description-box > .Bio-description{
+    width: 36.354vw;
+    display: flex;
+    flex-direction: column;
+    white-space: pre-line;
+}
+
+.Bio-description-box > .Bio-description > h1{
+    width: 80%;
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3.333vw;
+    line-height: 3.802vw;
+    color: #D6BA8D;
+}
+
+.Bio-description-box > .Bio-description > h1::before{
+    content: '';
+    position: absolute;
+    background: #D6BA8D;
+    width: 9.271vw;
+    height: 0.052vw;
+    margin-top: -1.563vw;
+}
+
+.Bio-description-box > .Bio-description > h2{
+    font-family: 'Exo 2', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.250vw;
+    line-height: 1.510vw;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 0.521vw;
+    margin-bottom: 1.563vw;
+}
+
+.Bio-description-box > .Bio-description > p{
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.250vw;
+    line-height: 120%;
+    color: #FFFFFF; 
+}
+
+.bio_info{
+    width: 63.438vw;
+    margin-top: 1.563vw;
+    white-space: break-spaces;
+}
+
+.bio_info > h1{
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.250vw;
+    line-height: 120%;
+    color: #D6BA8D;
+    margin-bottom: 1.250vw;
+}
+
+.bio_info > div{
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    font-size: 1.250vw;
+    margin-bottom: 1.250vw;
+    color: #FFFFFF;
+}
+
+.Bio-description-box{
+    margin-top: 5.625vw;
+}

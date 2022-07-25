@@ -5,8 +5,8 @@ import "./Footer_Adaptive.css"
 
 
 
-const Footer = (upDate) =>{    
-    let {copyright, mail, termsOfUse} = upDate.upDate;
+const Footer = ({upDate}) =>{    
+    let {copyright, mail, termsOfUse} = upDate;
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
     window.addEventListener("resize", ()=>{
         setScreenWidth(window.innerWidth)

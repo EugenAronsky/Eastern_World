@@ -19,6 +19,7 @@ header {
     background-image: url("../img/logo.svg");
     background-size: cover;
     background-repeat: no-repeat;
+    cursor: pointer;
 }
 
 header > nav{

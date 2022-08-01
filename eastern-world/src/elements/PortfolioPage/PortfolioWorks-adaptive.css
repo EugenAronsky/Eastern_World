@@ -1,0 +1,15 @@
+@media only screen and (max-width: 540px){
+    .PortfolioWorks-box{
+        margin-top: 6.250vw;
+        max-height: 846.250vw;
+    }
+
+    .page{
+        gap: 6.250vw;
+        width: 87.500vw;
+    }
+
+    .page > .PortfolioCard{
+        margin-left: 0;
+    }
+}

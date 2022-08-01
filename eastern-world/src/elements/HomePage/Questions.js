@@ -1,9 +1,10 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import Button from '../Common Elements/Button.js';
 import UpdateManeger from '../Common Elements/UnpackUpdate.js';
 import { Transition } from 'react-transition-group';
 import "./questions.css"
 import "./questions-adaptive.css"
+import { windowSize } from '../App.js';
 
 const Questions = ({upDate}) => {
     upDate = Object.values(upDate);
@@ -21,10 +22,7 @@ const Questions = ({upDate}) => {
         </div>
     );
 
-    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-    window.addEventListener("resize", ()=>{
-        setScreenWidth(window.innerWidth)
-    })
+    const screenWidth = useContext(windowSize);
 
     return(
         <div className='Questions'>

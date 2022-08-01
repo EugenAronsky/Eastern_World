@@ -1,16 +1,14 @@
-import React, {useState} from 'react';
-import UpdateManeger from '../Common Elements/UnpackUpdate.js';
-import Button from '../Common Elements/Button.js';
 import "./help.css"
 import "./help-adaptive.css"
+import React, {useContext} from 'react';
+import UpdateManeger from '../Common Elements/UnpackUpdate.js';
+import Button from '../Common Elements/Button.js';
+import { windowSize } from '../App.js';
+
 
 const Help = ({upDate}) => {
     let {title, description, link, background_image, phone_background_image} = upDate;
-
-    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-    window.addEventListener("resize", ()=>{
-        setScreenWidth(window.innerWidth)
-    })
+    const screenWidth = useContext(windowSize);
     
     return(
         <div className='Help' style={screenWidth <= 540 ? phone_background_image.fields.file.url === "default" ? {} : {backgroundImage : "url(" + phone_background_image.fields.file.url +")" } : background_image.fields.file.url === "default" ? {} : {backgroundImage : "url(" + background_image.fields.file.url +")" }}>

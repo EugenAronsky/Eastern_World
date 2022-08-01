@@ -4,7 +4,7 @@ import "./portfolioCard-adaptive.css";
 import UpdateManeger from '../Common Elements/UnpackUpdate.js';
 
 const PortfolioCard = ({data}) => {
-    let {title, date, articleImage, text} = data;
+    const {title, date, articleImage, text} = data;
     return(
         <div className="PortfolioCard">
             <h1>{title}</h1>

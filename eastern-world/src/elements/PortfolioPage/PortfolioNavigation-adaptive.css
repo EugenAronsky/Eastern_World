@@ -1,0 +1,101 @@
+@media only screen and (max-width: 540px){
+    .Portfolio-box{
+        width: 87.500vw;
+    }
+
+    .Portfolio-navbar{
+        gap: 6.250vw;
+        height: 28.750vw;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .Portfolio-navbar > h1{
+        font-size: 8.750vw;
+        line-height: 10vw;
+    }
+
+    .sort-box{
+        width: 61.250vw;
+    }
+
+    .sortByData{
+        width: 12.500vw;
+        height: 12.500vw;
+    }
+
+    .line-icon{
+        width: 10vw;
+        height: 10vw;
+        background-size: 70%;
+    }
+
+    .sortByGenre{
+        width: 46.250vw;
+        height: 12.500vw;
+    }
+
+    .sortByGenre > :nth-child(1){
+        width: 12.500vw;
+        height: 12.500vw;
+    }
+
+    .sortByGenre > :nth-child(2){
+        width: 33.750vw;
+        height: 12.500vw;
+    }
+
+    .drop-arrow{
+        width: 5vw;
+        height: 2.500vw;
+    }
+
+    .drop-arrow-box{
+        width: 12.500vw;
+        height: 12.500vw;
+    }
+
+    .sortByGenre > :nth-child(1) > .line{
+        height: 7.500vw;
+    }
+
+    .sortByGenre  > :nth-child(2) > h2{
+        font-size: 3.750vw;
+        line-height: 4.375vw;
+    }  
+
+    .drop-list{
+        width: 46.250vw;
+        margin-top: 44.375vw;
+    }
+
+    .drop-list-open{
+        height: 50vw;
+    }
+
+    .drop-list > div {
+        height: 50vw;
+        width: 33.750vw;
+    }
+
+    .drop-list > div > *{
+        font-size: 3.750vw;
+        line-height: 4.375vw;
+    }
+
+    .Portfolio-works-pages{
+        margin-top: 6.875vw;
+    }
+
+    .slide-arrow {
+        height: 5vw;
+        width: 2.500vw;
+        margin-left: 13.438vw;
+        margin-right: 13.438vw;
+    }
+
+    .works-pages{
+        font-size: 3.125vw;
+        line-height: 3.750vw;
+    }
+}

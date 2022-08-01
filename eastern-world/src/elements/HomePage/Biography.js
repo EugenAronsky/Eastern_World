@@ -1,16 +1,15 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import Button from "../Common Elements/Button.js"
 import UnpackDescription from '../Common Elements/UnpackUpdate.js';
 import './biography.css';
 import './biography-adaptive.css';
+import { windowSize } from '../App.js';
 
 
 const Biography = (upDate) =>{
     let {portrait, author, profession, home_description, home_background_image} = upDate.upDate;
-    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-    window.addEventListener("resize", ()=>{
-        setScreenWidth(window.innerWidth)
-    })
+    const screenWidth = useContext(windowSize);
+
     return(
         <div className='Biography' style={home_background_image.fields.file.url === "default" ? {} : {backgroundImage : "url(" + home_background_image.fields.file.url +")" }}>
             <div className='Bio-portret-back'></div>

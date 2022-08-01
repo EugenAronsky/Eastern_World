@@ -1,0 +1,10 @@
+@media only screen and (max-width: 540px){
+    .PortfolioPage{
+        padding-top: 9.375vw;
+        padding-bottom: 9.375vw;
+    }
+
+    .pp-bg{
+        margin-top: -9.375vw;
+    }
+}

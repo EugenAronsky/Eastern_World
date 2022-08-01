@@ -1,18 +1,15 @@
-import React, {useState} from "react";
+import React, {useState, useContext} from "react";
 import Button from "../Common Elements/Button.js"
 import PortfolioCard from "./PortfolioCard.js"
 import "./portfolio.css";
 import "./portfolio-adaptive.css";
+import { windowSize } from '../App.js';
 
 
 const Portfolio = ({upDate}) =>{
-    let articles = Object.values(upDate.articles);
-    let {title, background_image} = upDate.portfolio;
-
-    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-    window.addEventListener("resize", ()=>{
-        setScreenWidth(window.innerWidth)
-    })
+    const articles = Object.values(upDate.articles);
+    const {title, background_image} = upDate.portfolio;
+    const screenWidth = useContext(windowSize);
     const [slider, setSlider] = useState( 1 );
 
     return(

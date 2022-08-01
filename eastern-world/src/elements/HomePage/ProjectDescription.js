@@ -1,15 +1,14 @@
-import React, {useState} from "react";
+import React, {useState, useContext} from "react";
 import Button from "../Common Elements/Button.js"
 import "./projectDescription.css";
 import "./projectDescription-adaptive.css";
 import UpdateManeger from '../Common Elements/UnpackUpdate.js';
+import { windowSize } from '../App.js';
 
 const ProjectDescription = (upDate) => {
-    let {project_iamge, title, description, channel_link, background_image} = upDate.upDate;
-    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-    window.addEventListener("resize", ()=>{
-        setScreenWidth(window.innerWidth)
-    })
+    const {project_iamge, title, description, channel_link, background_image} = upDate.upDate;
+    const screenWidth = useContext(windowSize);
+
     return(
         <div className="ProjectDescription" style={background_image.fields.file.url === "default" ? {} : {backgroundImage : "url(" + background_image.fields.file.url +")" }}>
             <div className="pd-container">

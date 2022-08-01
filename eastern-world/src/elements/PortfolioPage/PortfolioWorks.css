@@ -1,0 +1,16 @@
+.PortfolioWorks-box{
+    display: flex;
+    width: 100%;
+    margin-bottom : 0;
+    margin-top: 3.125vw;
+    flex-direction: row;
+    max-height: 126.302vw;
+}
+
+.page{
+    gap: 1.563vw;
+    display: flex;
+    width: 63.438vw;
+    flex-wrap: wrap;
+}
+

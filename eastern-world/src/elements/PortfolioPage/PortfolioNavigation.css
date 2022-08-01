@@ -1,0 +1,217 @@
+.Portfolio-box{
+    width: 63.438vw;
+}
+
+.Portfolio-navbar{
+    display: flex;
+    width: 63.438vw;
+    height: 3.802vw;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Portfolio-navbar > h1{
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3.333vw;
+    line-height: 3.802vw;
+    color: #FFFFFF;
+}
+
+.sort-box{
+    display: flex;
+    width: 17.708vw;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sortByData{
+    display: flex;
+    width: 3.750vw;
+    height: 3.750vw;
+    background: #212121;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.line-icon{
+    width: 1.667vw;
+    height: 1.667vw;
+    background-image: url("../img/sort-by-data-new.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.sortByGenre{
+    display: flex;
+    width: 13.438vw;
+    height: 3.750vw;
+    align-items: center;
+    background: #212121;
+}
+
+.sortByGenre > :nth-child(1){
+    display: flex;
+    width: 3.750vw;
+    height: 3.750vw;
+    align-items: center;
+}
+
+.sortByGenre > :nth-child(2){
+    display: flex;
+    width: 9.688vw;
+    height: 3.750vw;
+    align-items: center;
+    justify-content: center;
+}
+
+.drop-arrow{
+    width: 1.250vw;
+    height: 0.625vw;
+    background-image: url("../img/drop-arrow.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.drop-arrow-box{
+    display: flex;
+    width: 3.750vw;
+    height: 3.750vw;
+    align-items: center;
+    justify-content: center;
+}
+
+.sortByGenre > :nth-child(1) > .line{
+    width: 0.052vw;
+    height: 2.604vw;
+    margin-top: 0;
+    margin-bottom: 0;
+    background: #D9D9D9;
+    opacity: 0.5;
+    z-index: 2;
+}
+
+.sortByGenre  > :nth-child(2) > h2{
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.042vw;
+    line-height: 1.198vw;
+    text-align: center;
+    letter-spacing: 0.08em;
+    color: #D6BA8D;
+}
+
+.drop-list{
+    top: 0;
+    height: 0vw;
+    display: flex;
+    width: 13.438vw;
+    position: absolute;
+    margin-top: 11.458vw;
+    align-items: center;
+    justify-content: flex-end;
+    background: #212121;
+    transition: 1s;
+    z-index: 1;
+}
+
+.drop-list-open{
+    height: 15vw;
+}
+
+.drop-list-close{
+    height: 0vw;
+    transition-delay: 0.8s;
+}
+
+.drop-list > div {
+    height: 14.5vw;
+    display: flex;
+    width: 9.635vw;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.drop-list > div > *{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.042vw;
+    line-height: 1.198vw;
+    text-align: center;
+    letter-spacing: 0.08em;
+    color: #C4C4C4;
+    cursor: pointer;
+    transition-property: opacity;
+    
+}
+
+.hidden{
+    opacity: 0;
+    transition-delay: 0s;
+    transition-duration: .8s;
+    pointer-events: none;
+}
+
+.visible{
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 1s;
+    transition-duration: .8s;
+}
+
+.choose{
+    color: #D6BA8D !important;
+}
+
+.flip{
+    transform: rotateX(180deg);
+}
+
+.Portfolio-works-pages{
+    display: flex;
+    margin-top: 3.281vw;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.slide-arrow {
+    width: 0.833vw;
+    height: 1.771vw;
+    background-image: url("../img/slide-arrow.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-left: 3.958vw;
+    margin-right: 3.958vw;
+    cursor: pointer;
+}
+
+.right{
+    transform: rotateZ(180deg);
+}
+
+.works-pages{
+    font-family: 'Exo 2.0', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 0.938vw;
+    line-height: 1.146vw;
+    letter-spacing: 0.06em;
+    color: #909090;
+    display: inline-flex;
+    flex-direction: row;
+    gap: 0.625vw;
+}
+
+.works-pages > *{
+    cursor: pointer;
+}

@@ -1,6 +1,5 @@
 .FullBiography{
     width: 100vw;
-    height: auto;
     display: flex;
     padding-top: 3.125vw;
     padding-bottom: 3.125vw;
@@ -34,6 +33,7 @@
     background-image: url("../img/bio-full-bg.png");
     background-repeat: no-repeat;
     background-position: center -6vw;
+    filter: grayscale(100%);
     filter: brightness(.5);
     z-index: -2;
 }
@@ -52,16 +52,6 @@
     box-shadow: 0 -15vw 10vw 5vw #333333ad, 0 -10vw 10vw 5vw #333333ad , 0 -2vw 2vw 0 #333333;
     margin-top: -6vw;
     z-index: -1;
-}
-
-.Bio-bg::after{
-    z-index: -1;
-    content: '';
-    width: 100%;
-    box-shadow: 0 -25vw 10vw 10vw #333333ad, 0 -10vw 10vw 10vw #333333ad , 0 -5vw 5vw 0 #33333380;
-    height: calc( 100% - 41.760vw);
-    mix-blend-mode: soft-light;
-    margin-top: -6vw;
 }
 
 .full-bio-container{

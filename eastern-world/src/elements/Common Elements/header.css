@@ -7,7 +7,7 @@ header {
     border-bottom:  0.052vw #6C6C6C solid;
     align-items: center;
     position: fixed;
-    z-index: 2;
+    z-index: 20;
     top: 0;
 }
 
@@ -41,6 +41,7 @@ header > nav > a {
     letter-spacing: 0.08em;
     color: #FFFFFF;
     position: relative;
+    cursor: pointer;
     transition: .5s;
 }
 

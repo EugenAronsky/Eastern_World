@@ -27,7 +27,7 @@ const Header = ({upDate}) => {
             <nav>
                 <a onClick={()=>changePageFunction("HomePage")} className = {currentPage === "HomePage" ? 'active' : ''}>ГЛАВНАЯ</a>
                 <a onClick={()=>changePageFunction("BiographyPage")} className = {currentPage === "BiographyPage" ? 'active' : ''}>БИОГРАФИЯ</a>
-                <a >ПОРТФОЛИО</a>
+                <a onClick={()=>changePageFunction("PortfolioPage")} className = {currentPage === "PortfolioPage" ? 'active' : ''}>ПОРТФОЛИО</a>
                 <a >МЕРОПРИЯТИЯ</a>
             </nav>
             <div className = 'additional_options'>
@@ -59,7 +59,7 @@ const Header = ({upDate}) => {
                             <div className='Icon burgerMenuIcon'  onClick={handleClick}></div>
                         </div>
                         <a className={isActive ? 'show ' : 'hide'} onClick={()=>changePageFunction("BiographyPage")}>БИОГРАФИЯ</a>
-                        <a className={isActive ? 'show A-line' : 'hide'} onClick={()=>changePageFunction("HomePage")}>ПОРТФОЛИО</a>
+                        <a className={isActive ? 'show A-line' : 'hide'} onClick={()=>changePageFunction("PortfolioPage")}>ПОРТФОЛИО</a>
                         <a className={isActive ? 'show A-line' : 'hide'} onClick={()=>changePageFunction("HomePage")}>МЕРОПРИЯТИЯ</a>
                         <a className={isActive ? 'show A-line' : 'hide'} onClick={()=>changePageFunction("HomePage")}>РЕКОМЕНДАЦИИ</a>
                         <a className={isActive ? 'show A-line' : 'hide'} onClick={()=>changePageFunction("HomePage")}>ВОПРОС/ОТВЕТ</a>

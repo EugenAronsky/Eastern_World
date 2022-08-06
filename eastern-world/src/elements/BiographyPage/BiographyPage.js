@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import FullBiography from "./FullBiography";
 import findMyData from '../Common Elements/UpdateMeneger.js';
 
@@ -8,4 +8,4 @@ const BiographyPage = ({newData}) => {
     );
 };
 
-export default BiographyPage;
+export default memo(BiographyPage);

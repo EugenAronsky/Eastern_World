@@ -1,0 +1,79 @@
+.Announcement{
+    width: 100%;
+    height: fit-content;
+    padding-bottom: 1.563vw;
+    margin-bottom: 1.563vw;
+    border-bottom: 0.052vw #D6BA8D solid;
+}
+
+.contetnt{
+    width: 100%;
+    display: flex;
+    height: fit-content;
+    justify-content: space-between;
+}
+
+.contetnt > :nth-child(1){ 
+    width: 20.104vw;
+    height: 16.667vw;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.contetnt > :nth-child(2){ 
+    width: 41.771vw;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.contetnt > :nth-child(2) > h1{ 
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.667vw;
+    line-height: 1.875vw;
+    color: #D6BA8D;
+}
+
+.contetnt > :nth-child(2) > h2{ 
+    margin-top: 0.521vw;
+    font-family: 'Exo 2', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.250vw;
+    line-height: 1.510vw;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.Announcement-description{
+    margin-top: 1.042vw;
+    font-family: 'Georgia', sans-serif;
+    font-style: normal;
+    font-weight: 400  !important;
+    font-size: 1.250vw;
+    line-height: 120%;
+    white-space: pre-line;
+    color: #FFFFFF;
+}
+
+.buttons-box{
+    display: flex;
+    width: 22.396vw;
+    height: 2.083vw;
+    margin-top: 2.083vw;
+    margin-left: 19.375vw;
+    justify-content: space-between;
+}
+
+.buttons-box > .button > div{
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.729vw;
+    line-height: 0.833vw;
+    letter-spacing: 0.08em;
+    color: #FFFFFF;
+    margin-top: 0.2vw;
+}

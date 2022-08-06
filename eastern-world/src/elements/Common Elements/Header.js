@@ -1,5 +1,5 @@
 import React from 'react';
-import {useState} from 'react';
+import {useState, memo} from 'react';
 import "./header.css"
 import "./Header_Adaptive.css"
 
@@ -28,7 +28,7 @@ const Header = ({upDate}) => {
                 <a onClick={()=>changePageFunction("HomePage")} className = {currentPage === "HomePage" ? 'active' : ''}>ГЛАВНАЯ</a>
                 <a onClick={()=>changePageFunction("BiographyPage")} className = {currentPage === "BiographyPage" ? 'active' : ''}>БИОГРАФИЯ</a>
                 <a onClick={()=>changePageFunction("PortfolioPage")} className = {currentPage === "PortfolioPage" ? 'active' : ''}>ПОРТФОЛИО</a>
-                <a >МЕРОПРИЯТИЯ</a>
+                <a onClick={()=>changePageFunction("EventsPage")} className = {currentPage === "EventsPage" ? 'active' : ''}>МЕРОПРИЯТИЯ</a>
             </nav>
             <div className = 'additional_options'>
                 <div className='iconBox'>
@@ -60,8 +60,8 @@ const Header = ({upDate}) => {
                         </div>
                         <a className={isActive ? 'show ' : 'hide'} onClick={()=>changePageFunction("BiographyPage")}>БИОГРАФИЯ</a>
                         <a className={isActive ? 'show A-line' : 'hide'} onClick={()=>changePageFunction("PortfolioPage")}>ПОРТФОЛИО</a>
-                        <a className={isActive ? 'show A-line' : 'hide'} onClick={()=>changePageFunction("HomePage")}>МЕРОПРИЯТИЯ</a>
-                        <a className={isActive ? 'show A-line' : 'hide'} onClick={()=>changePageFunction("HomePage")}>РЕКОМЕНДАЦИИ</a>
+                        <a className={isActive ? 'show A-line' : 'hide'} onClick={()=>changePageFunction("EventsPage")}>МЕРОПРИЯТИЯ</a>
+                        <a className={isActive ? 'show A-line' : 'hide'} onClick={()=>changePageFunction("MyRecommendationPage")}>РЕКОМЕНДАЦИИ</a>
                         <a className={isActive ? 'show A-line' : 'hide'} onClick={()=>changePageFunction("HomePage")}>ВОПРОС/ОТВЕТ</a>
                         <a className={isActive ? 'show A-line' : 'hide'} onClick={()=>changePageFunction("HomePage")}>ПОМОЩЬ УКРАИНЕ</a>
                         <a className={isActive ? 'show A-line' : 'hide'} onClick={()=>changePageFunction("HomePage")}>КОНТАКТЫ</a>
@@ -73,4 +73,4 @@ const Header = ({upDate}) => {
     );
 }
 
-export default Header;
+export default memo(Header);

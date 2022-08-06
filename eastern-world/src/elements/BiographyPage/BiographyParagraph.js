@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import UnpackDescription from '../Common Elements/UnpackUpdate.js';
 
 const BiographyParagraph = ({upDate}) =>{
@@ -11,4 +11,4 @@ const BiographyParagraph = ({upDate}) =>{
     );
 }
 
-export default BiographyParagraph;
+export default memo(BiographyParagraph);

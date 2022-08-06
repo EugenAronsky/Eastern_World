@@ -1,7 +1,9 @@
-import React, {useState, createContext} from 'react';
+import React, {useState, createContext, useMemo} from 'react';
 import HomePage from './HomePage/HomePage';
 import BiographyPage from './BiographyPage/BiographyPage';
+import MyRecommendationPage from './MyRecommendationPage/MyRecommendationPage';
 import PortfolioPage from './PortfolioPage/PortfolioPage';
+import EventsPage from './EventsPage/EventsPage.js'
 import Layout from './Common Elements/Layout.js';
 import "./App.css"
 
@@ -41,6 +43,12 @@ const App = ({newData}) => {
             case "PortfolioPage":
                 return <PortfolioPage newData = {newData}/>
 
+            case "MyRecommendationPage":
+                return <MyRecommendationPage newData = {newData}/>
+
+            case "EventsPage":
+                return <EventsPage newData = {newData}/>
+
             default:
                 return <HomePage newData = {newData}/>
         }
@@ -50,7 +58,7 @@ const App = ({newData}) => {
         <Data.Provider value = {[newData, changePage]}>
             <Layout>
                 <windowSize.Provider value={screenWidth}>
-                    {renderSwitch(currentPage)}
+                    {useMemo(()=>renderSwitch(currentPage), [currentPage])}
                 </windowSize.Provider>
             </Layout>
         </Data.Provider>

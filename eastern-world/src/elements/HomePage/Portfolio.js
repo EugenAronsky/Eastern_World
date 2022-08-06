@@ -1,4 +1,4 @@
-import React, {useState, useContext} from "react";
+import React, {useState, useContext, memo} from "react";
 import Button from "../Common Elements/Button.js"
 import PortfolioCard from "./PortfolioCard.js"
 import "./portfolio.css";
@@ -36,4 +36,4 @@ const Portfolio = ({upDate}) =>{
     );
 }
 
-export default Portfolio;
+export default memo(Portfolio);

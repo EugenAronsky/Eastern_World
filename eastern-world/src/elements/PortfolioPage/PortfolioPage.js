@@ -1,4 +1,4 @@
-import React, {createContext, useState, useContext, useCallback, useMemo} from "react";
+import React, {createContext, useState, useContext, memo} from "react";
 import "./PortfolioPage.css"
 import "./PortfolioPage-adaptive.css"
 import PortfolioWorks from "./PortfolioWorks";
@@ -50,4 +50,4 @@ const PortfolioPage = ({newData}) =>{
     )
 }
 
-export default PortfolioPage;
+export default memo(PortfolioPage);

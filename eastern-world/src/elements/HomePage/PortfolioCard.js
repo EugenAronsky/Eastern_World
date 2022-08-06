@@ -1,4 +1,4 @@
-import React from "react";
+import React, {memo} from "react";
 import "./portfolioCard.css";
 import "./portfolioCard-adaptive.css";
 import UpdateManeger from '../Common Elements/UnpackUpdate.js';
@@ -16,4 +16,4 @@ const PortfolioCard = ({data}) => {
     );
 }
 
-export default PortfolioCard;
+export default memo(PortfolioCard);

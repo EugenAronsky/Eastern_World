@@ -1,4 +1,4 @@
-import React, {useState, useContext} from 'react';
+import React, {useState, useContext, memo} from 'react';
 import Button from '../Common Elements/Button.js';
 import UpdateManeger from '../Common Elements/UnpackUpdate.js';
 import { Transition } from 'react-transition-group';
@@ -59,4 +59,4 @@ const Questions = ({upDate}) => {
     );
 }
 
-export default Questions;
+export default memo(Questions);

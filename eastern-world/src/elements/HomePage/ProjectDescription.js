@@ -1,4 +1,4 @@
-import React, {useState, useContext} from "react";
+import React, {useState, useContext, memo} from "react";
 import Button from "../Common Elements/Button.js"
 import "./projectDescription.css";
 import "./projectDescription-adaptive.css";
@@ -25,4 +25,4 @@ const ProjectDescription = (upDate) => {
     );
 }
 
-export default ProjectDescription;
+export default memo(ProjectDescription);

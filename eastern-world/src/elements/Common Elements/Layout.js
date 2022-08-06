@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React, {useContext, memo} from "react";
 import Header from './Header.js';
 import Footer from './Footer.js';
 import findMyData from './UpdateMeneger.js';
@@ -18,4 +18,4 @@ const Layout = ({children}) =>{
     );
 }
 
-export default Layout;
+export default memo(Layout);

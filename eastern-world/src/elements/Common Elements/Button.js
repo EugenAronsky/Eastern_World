@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import "./button.css"
 
 const Button = ({content, width ,height, link, target = "_self"}) => {
@@ -7,4 +7,4 @@ const Button = ({content, width ,height, link, target = "_self"}) => {
     );
 }
 
-export default Button;
+export default memo(Button);

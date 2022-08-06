@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import "./FullBiography.css"
 import "./FullBiography-adaptive.css"
 import BiographyParagraph from "./BiographyParagraph";
@@ -46,4 +46,4 @@ const FullBiography = ({upDate}) =>{
     );
 }
 
-export default FullBiography;
+export default memo(FullBiography);

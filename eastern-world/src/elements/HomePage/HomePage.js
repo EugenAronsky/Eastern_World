@@ -1,4 +1,4 @@
-import React from "react";
+import React, {memo} from "react";
 import Slider from './Slider.js';
 import Biography from './Biography'
 import ProjectDescription from './ProjectDescription.js'
@@ -21,4 +21,4 @@ const HomePage = ({newData}) =>{
     )
 }
 
-export default HomePage;
+export default memo(HomePage);

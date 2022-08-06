@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, memo} from 'react';
 import Button from "./Button.js"
 import "./footer.css"
 import "./Footer_Adaptive.css"
@@ -36,4 +36,4 @@ const Footer = ({upDate}) =>{
     );
 }
 
-export default Footer;
+export default memo(Footer);

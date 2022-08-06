@@ -1,4 +1,4 @@
-import React, {useState, useContext} from 'react';
+import React, {useState, useContext, memo} from 'react';
 import Button from "../Common Elements/Button.js"
 import UnpackDescription from '../Common Elements/UnpackUpdate.js';
 import './biography.css';
@@ -26,4 +26,4 @@ const Biography = (upDate) =>{
     );
 }
 
-export default Biography;
+export default memo(Biography);

@@ -106,7 +106,7 @@ const base_values = {
 }
 // || "bio_paragraph"
 export default function findMyData(name, data){
-    if(name === 'article' || name === 'question' || name === "bio_paragraph"){
+    if(name === 'article' || name === 'question' || name === "bio_paragraph" || name === "announcement" || name === "recommendation"){
         let articles = {};
         for (let index = 0; index < data.length; index++) {
             if(data[index].sys.contentType.sys.id === name) articles[index] = (data[index].fields);

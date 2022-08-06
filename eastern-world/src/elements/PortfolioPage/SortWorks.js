@@ -1,4 +1,3 @@
-import { useCallback } from "react";
 const months = ["января", "февраля", "марта", "апреля", "мая", "июня", "июля", "августа", "сентября", "октября", "ноября", "декабря"];
     
 export function SortByData(articalsList, state){

@@ -1,6 +1,6 @@
 import "./help.css"
 import "./help-adaptive.css"
-import React, {useContext} from 'react';
+import React, {useContext, memo} from 'react';
 import UpdateManeger from '../Common Elements/UnpackUpdate.js';
 import Button from '../Common Elements/Button.js';
 import { windowSize } from '../App.js';
@@ -22,4 +22,4 @@ const Help = ({upDate}) => {
     );
 }
 
-export default Help;
+export default memo(Help);

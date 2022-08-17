@@ -1,11 +1,18 @@
 .Help{
     width: 100%;
     height: 34.896vw;
+}
 
+.help-bg{
+    width: 100%;
+    height: 34.896vw;
+    position: absolute;
     background-image: url("../img/war.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    filter: grayscale(1);
+    z-index: -1;
 }
 
 .Help::before{

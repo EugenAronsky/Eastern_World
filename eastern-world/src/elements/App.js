@@ -5,6 +5,7 @@ import MyRecommendationPage from './MyRecommendationPage/MyRecommendationPage';
 import PortfolioPage from './PortfolioPage/PortfolioPage';
 import EventsPage from './EventsPage/EventsPage.js'
 import Layout from './Common Elements/Layout.js';
+import HelpPage from './HelpPage/HelpPage';
 import "./App.css"
 
 export const Data = createContext();
@@ -13,6 +14,7 @@ export const windowSize = createContext();
 const App = ({newData}) => {
     const [currentPage, setCurrentPage] = useState(localStorage.getItem("Current_Page") || "HomePage");
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+    const [previousState, setPreviousState] = useState([]);
     
     window.addEventListener("resize", ()=>{
         setScreenWidth(window.innerWidth)
@@ -32,6 +34,8 @@ const App = ({newData}) => {
         }
     }
 
+    
+
     function renderSwitch(param){
         switch (param) {
             case "HomePage":
@@ -48,12 +52,15 @@ const App = ({newData}) => {
 
             case "EventsPage":
                 return <EventsPage newData = {newData}/>
+            
+            case "HelpPage":
+                return <HelpPage newData = {newData}/>
 
             default:
                 return <HomePage newData = {newData}/>
         }
     }
-
+    
     return (
         <Data.Provider value = {[newData, changePage]}>
             <Layout>

@@ -1,4 +1,4 @@
-import React, {createContext, useState, useContext, memo} from "react";
+import React, {createContext, useState, useContext, memo, useCallback} from "react";
 import "./PortfolioPage.css"
 import "./PortfolioPage-adaptive.css"
 import PortfolioWorks from "./PortfolioWorks";
@@ -19,7 +19,7 @@ const PortfolioPage = ({newData}) =>{
     const properties = {
         
         // articals object
-        article: findMyData("article", newData),
+        article: useCallback(findMyData('article', newData), [newData]),
 
         // variables
         gener: gener,

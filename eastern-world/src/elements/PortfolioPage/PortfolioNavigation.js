@@ -93,9 +93,9 @@ const PortfolioNavigation = ({children}) => {
                         <div className={sortDataType ? "line-icon" : "line-icon flip"}/>
                     </div>
                     <div className="sortByGenre">
-                        <div>
+                        <div onClick={()=>setOpen((state)=>!state)}>
                             <div className="drop-arrow-box">
-                                <div className="drop-arrow" onClick={()=>setOpen((state)=>!state)}/>
+                                <div className="drop-arrow"/>
                             </div>
                             <div className="line"></div>
                         </div>
@@ -115,11 +115,11 @@ const PortfolioNavigation = ({children}) => {
             </div>
                 {children}
             <div className="Portfolio-works-pages">
-                <div className="slide-arrow left" onClick={()=>{if(currentPage > 1)setPage((num)=>num - 1)}}></div>
+                <div className="slide-arrow left" onClick={()=>{if(currentPage > 1) setPage((num)=>num - 1)}}></div>
                     <div className="works-pages" translate="no">
                         {create_a_new_page_if_necessary()}
                     </div>
-                <div className="slide-arrow right" onClick={()=>{if(currentPage < iteration)setPage((num)=>num + 1)}}></div>
+                <div className="slide-arrow right" onClick={()=>{if(currentPage < iteration) setPage((num)=>num + 1)}}></div>
             </div>
         </div>
     );

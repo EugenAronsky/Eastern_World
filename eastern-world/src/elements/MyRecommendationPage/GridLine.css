@@ -97,7 +97,7 @@
     position: absolute;
     transition-delay: 0.4s;
     transition-duration: 0.6s;
-    pointer-events: none;
+    pointer-events: none !important;
     bottom: 3.073vw;
     width: calc(100% - 2.094vw);
     z-index: 1;
@@ -173,4 +173,10 @@
 
 .rtl{
     direction: rtl;
+    text-align: end;
+}
+
+.last :last-child{
+    direction: ltr;
+    text-align: start;
 }

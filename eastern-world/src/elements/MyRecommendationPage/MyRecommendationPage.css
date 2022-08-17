@@ -57,4 +57,12 @@
         padding-top: 9.375vw;
         padding-bottom: 9.375vw;
     }
+
+    .Background-container{
+        margin-top: -9.375vw;
+    }
+    
+    .grid-container{
+        gap: 6.250vw;
+    }
 }

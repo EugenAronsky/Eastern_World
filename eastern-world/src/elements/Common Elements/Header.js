@@ -58,13 +58,13 @@ const Header = ({upDate}) => {
                             <div className='Icon searchIcon' ></div>
                             <div className='Icon burgerMenuIcon'  onClick={handleClick}></div>
                         </div>
-                        <a className={isActive ? 'show ' : 'hide'} onClick={()=>changePageFunction("BiographyPage")}>БИОГРАФИЯ</a>
-                        <a className={isActive ? 'show A-line' : 'hide'} onClick={()=>changePageFunction("PortfolioPage")}>ПОРТФОЛИО</a>
-                        <a className={isActive ? 'show A-line' : 'hide'} onClick={()=>changePageFunction("EventsPage")}>МЕРОПРИЯТИЯ</a>
-                        <a className={isActive ? 'show A-line' : 'hide'} onClick={()=>changePageFunction("MyRecommendationPage")}>РЕКОМЕНДАЦИИ</a>
-                        <a className={isActive ? 'show A-line' : 'hide'} onClick={()=>changePageFunction("HomePage")}>ВОПРОС/ОТВЕТ</a>
-                        <a className={isActive ? 'show A-line' : 'hide'} onClick={()=>changePageFunction("HomePage")}>ПОМОЩЬ УКРАИНЕ</a>
-                        <a className={isActive ? 'show A-line' : 'hide'} onClick={()=>changePageFunction("HomePage")}>КОНТАКТЫ</a>
+                        <a className={isActive ? currentPage === "BiographyPage" ? 'show activeBurger' : 'show' : 'hide'} onClick={()=>changePageFunction("BiographyPage")}>БИОГРАФИЯ</a>
+                        <a className={isActive ? currentPage === "PortfolioPage" ? 'show activeBurger A-line' : 'show A-line' : 'hide'} onClick={()=>changePageFunction("PortfolioPage")}>ПОРТФОЛИО</a>
+                        <a className={isActive ? currentPage === "EventsPage" ? 'show activeBurger A-line' : 'show A-line' : 'hide'} onClick={()=>changePageFunction("EventsPage")}>МЕРОПРИЯТИЯ</a>
+                        <a className={isActive ? currentPage === "MyRecommendationPage" ? 'show activeBurger A-line' : 'show A-line' : 'hide'} onClick={()=>changePageFunction("MyRecommendationPage")}>РЕКОМЕНДАЦИИ</a>
+                        <a className={isActive ? currentPage === "QuestionPage" ? 'show activeBurger A-line' : 'show A-line' : 'hide'} onClick={()=>changePageFunction("QuestionPage")}>ВОПРОС/ОТВЕТ</a>
+                        <a className={isActive ? currentPage === "HelpPage" ? 'show activeBurger A-line' : 'show A-line' : 'hide'} onClick={()=>changePageFunction("HelpPage")}>ПОМОЩЬ УКРАИНЕ</a>
+                        <a className={isActive ? currentPage === "ContactsPage" ? 'show activeBurger A-line' : 'show A-line' : 'hide'} onClick={()=>changePageFunction("HomePage")}>КОНТАКТЫ</a>
                         <a className={isActive ? 'show tg' : 'hide tg'} target="blank" href="https://t.me/eastern_world"></a>
                     </nav>  
                 </div>

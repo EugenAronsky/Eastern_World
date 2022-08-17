@@ -1,0 +1,77 @@
+.Photo-Box{
+    display: flex;
+    width: 18.020vw;
+    height: 17.290vw;
+    row-gap: 0.521vw;
+    padding: 1.042vw;
+    background: #212121;
+    flex-direction: column;
+    border-bottom: 0.052vw solid #D6BA8D;
+}
+
+.Photo{
+    width: 18.020vw;
+    height: 9.896vw;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.Photo-Box > h1{
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 0.729vw;
+    line-height: 0.885vw;
+    color: #D6BA8D;
+}
+
+.Photo-Box > span{
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.833vw;
+    line-height: 130%;
+    color: #FFFFFF;
+
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    white-space: pre-line;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+
+@media only screen and (max-width: 540px) {
+    .Photo-Box{
+        width: 100%;
+        height: calc(100% - 12.5vw);
+        row-gap: 3.125vw;
+        padding: 6.250vw;
+        position: relative;
+    }
+
+    .Photo-Box::after{
+        left: 0;
+        width: 100%;
+        content: '';
+        bottom: 0.09vw;
+        height: 0.052vw;
+        position: absolute;
+        background: #D6BA8D;
+    }
+
+    .Photo{
+        width: 75vw;
+        height: 40.625vw;
+    }
+
+    .Photo-Box > h1{
+        font-size: 3.125vw;
+        line-height: 3.750vw;
+    }
+
+    .Photo-Box > span{
+        font-size:3.125vw;
+    }
+}

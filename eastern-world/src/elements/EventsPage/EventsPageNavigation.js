@@ -65,12 +65,12 @@ const EventsPageNavigation = ({children}) =>{
         <h1 className="PageTitle">Мероприятия</h1>
         {children}
         <div className="Portfolio-works-pages">
-            <div className="slide-arrow left" onClick={()=>{if(currentPage > 1)setPage((num)=>num - 1)}}></div>
+            <div className="slide-arrow left" onClick={()=>{if(currentPage > 1) setPage((num)=>num - 1)}}></div>
                 <div className="works-pages" translate="no">
                     {create_a_new_page_if_necessary()}
                 </div>
-            <div className="slide-arrow right" onClick={()=>{if(currentPage < iteration)setPage((num)=>num + 1)}}></div>
-        </div>
+            <div className="slide-arrow right" onClick={()=>{if(currentPage < iteration) setPage((num)=>num + 1)}}></div>
+        </div> 
         </>
     );
 }

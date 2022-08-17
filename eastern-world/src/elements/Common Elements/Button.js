@@ -1,9 +1,20 @@
-import React, { memo } from "react";
+import React, { memo, useContext} from "react";
+import {Data} from "../App";
 import "./button.css"
 
-const Button = ({content, width ,height, link, target = "_self"}) => {
+const conditionalList = ['HomePage', 'BiographyPage', 'EventsPage', 'PortfolioPage', 'MyRecommendationPage', 'QuestionPage', 'HelpPage', "ContactsPage"];
+
+const Button = ({content, width ,height, link = null, target = "_self"}) => {
+    const changePageFunction = useContext(Data)[1];
+
     return (
-        <a href={link} target = {target} className = "button" style = {{ width : width, height: height}}><div>{content}</div></a>
+        <>
+            {link === conditionalList.find((el)=> el === link) ? 
+                <a onClick={()=>changePageFunction(link)} target = {target} className = "button" style = {{ width : width, height: height}}><div>{content}</div></a>
+            : 
+                <a href={link} target = {target} className = "button" style = {{ width : width, height: height}}><div>{content}</div></a>
+            }
+        </>
     );
 }
 

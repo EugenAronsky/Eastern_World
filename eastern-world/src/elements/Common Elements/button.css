@@ -22,7 +22,7 @@
 }
 
 .button:active{
-    border:  0.052vw solid #D6BA8D;
+    border: 0.052vw solid #D6BA8D;
     background: rgba(214, 186, 141, 0.8);
 }
 @media only screen and (max-width: 540px) {

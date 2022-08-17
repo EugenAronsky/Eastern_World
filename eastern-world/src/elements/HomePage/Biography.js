@@ -20,7 +20,7 @@ const Biography = (upDate) =>{
                 <span>{typeof home_description !== 'string' ? UnpackDescription(home_description) : home_description}</span>   
             </div>
             <div className = "Bio-button">
-                {screenWidth <= 540 ? <Button content = "УЗНАТЬ БОЛЬШЕ" width = "40.625vw" height = "9.375vw" link={''}/> : <Button content = "УЗНАТЬ БОЛЬШЕ" width = "13.542vw" height = "3.125vw" link={''}/>}
+                {screenWidth <= 540 ? <Button content = "УЗНАТЬ БОЛЬШЕ" width = "40.625vw" height = "9.375vw" link={'BiographyPage'}/> : <Button content = "УЗНАТЬ БОЛЬШЕ" width = "13.542vw" height = "3.125vw" link={'BiographyPage'}/>}
             </div>
         </div>
     );

@@ -6,7 +6,6 @@ const WorkPage = ({list}) =>{
     const {articals, page, page_numbers, worksPerPage} = list;
     let iteration = null; 
 
-
     const fillPage = useCallback(()=>{
         let articlesList = [];
         

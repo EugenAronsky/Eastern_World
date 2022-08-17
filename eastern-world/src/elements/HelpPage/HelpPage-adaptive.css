@@ -1,0 +1,84 @@
+@media only screen and (max-width: 540px) {
+    .HelpPage{
+        padding-top: 9.375vw;
+        padding-bottom: 9.375vw;
+    }
+
+    .help-container{
+        gap: 6.250vw;
+        width: 87.500vw;
+    }
+
+    .TitleLine{
+        margin-bottom: 0;
+        flex-direction: column;
+        justify-content: unset;
+    }
+
+    .TitleLine > h1::after{
+        margin-bottom: -3.125vw;
+    }
+
+    .donate_button{
+        margin-top: 9.688vw;
+    }
+
+    .PhotoBox{
+        width: 87.500vw;
+        height: 79.375vw;
+        overflow: hidden;
+        flex-wrap: nowrap;
+        flex-direction: row;
+    }
+
+    .slider_box{
+        display: flex;
+        width: 87.500vw;
+        height: fit-content;
+        justify-content: center;
+    }
+
+    .slider_box_hidden{
+        overflow: hidden;
+        justify-content: start;
+    }
+
+    .slider_box_hidden > .slider_photo{
+        margin-left: 3.125vw;
+        transition: .8s;
+    }
+
+    .slider_photo{
+        width: fit-content;
+        height: fit-content;
+        display: inline-flex;
+        justify-content: space-between;
+    }
+
+    .slider_photo > *{
+        width: 0;
+        height: 0;
+        transition: .2s;
+        border-radius: 100%;
+        margin-right: 6.250vw;
+        background: #ffffff;
+        border: 0.85vw solid #ffffff;
+    }
+
+    .slider_photo > :last-child{
+        margin-right: 0;
+    }
+
+    .slider_photo > .active_slide{
+        width: 1vw;
+        height: 1vw;
+        border-radius: 100%;
+        background: transparent;
+        border: 0.4vw solid #ffffff;
+    }
+        
+    .photoContainer{
+        gap: 6.250vw;
+        flex-wrap: nowrap;
+    }
+}

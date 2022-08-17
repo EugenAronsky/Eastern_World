@@ -6,10 +6,9 @@ const MyRecommendationNavigation = ({children}) =>{
 
     const setPage = useContext(RecommendationWrapper).setCurrentPage;
     const currentPage = useContext(RecommendationWrapper).currentPage;
+    const worksPerPage = useContext(RecommendationWrapper).worksPerPage;
     const amountOfAnnouncement = useContext(RecommendationWrapper).amountOfAnnouncement;
-    const iteration = Math.ceil(amountOfAnnouncement / 14);
-
-    console.log(amountOfAnnouncement)
+    const iteration = Math.ceil(amountOfAnnouncement / worksPerPage);
 
     function create_a_new_page_if_necessary(){
         if(amountOfAnnouncement > 5 ){

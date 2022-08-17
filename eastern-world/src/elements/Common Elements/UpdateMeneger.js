@@ -104,9 +104,11 @@ const base_values = {
     }
   
 }
-// || "bio_paragraph"
+
+const conditionalList = ['article', 'question', 'bio_paragraph', 'announcement',  'recommendation', 'photo_for_help_page', "fund"];
+
 export default function findMyData(name, data){
-    if(name === 'article' || name === 'question' || name === "bio_paragraph" || name === "announcement" || name === "recommendation"){
+    if(name === conditionalList.find((el)=>el === name)){
         let articles = {};
         for (let index = 0; index < data.length; index++) {
             if(data[index].sys.contentType.sys.id === name) articles[index] = (data[index].fields);

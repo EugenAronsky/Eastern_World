@@ -1,0 +1,39 @@
+.Fond-Box{
+    width: clac(100% - 3.125vw);
+    display: flex;
+    padding: 1.563vw;
+    position: relative;
+    height: fit-content;
+    align-items: center;
+    background: #212121;
+    justify-content: space-between;
+    border-bottom: 0.052vw solid #D6BA8D;
+}
+
+.Fond-Box > h1{
+    font-family: 'Georgia', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.250vw;
+    line-height: 1.406vw;
+    color: #FFFFFF;
+    max-width: 50%;
+}
+
+@media only screen and (max-width: 540px) {
+    .Fond-Box{
+        gap: 6.250vw;
+        padding: 6.250vw;
+        height: fit-content;
+        flex-direction: column;
+    }
+
+    .Fond-Box > h1{
+        max-width: 100%;
+        font-family: 'Georgia', sans-serif;
+        font-style: normal;
+        font-size: 3.750vw;
+        line-height: 4.375vw;
+        text-align: center;
+    }
+}

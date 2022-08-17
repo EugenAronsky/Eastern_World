@@ -1,3 +1,14 @@
 .MyRecommendationNavigation{
     width: 63.438vw;
 }
+
+@media only screen and (max-width: 540px) {
+    .MyRecommendationNavigation{
+        width: 87.500vw;
+    }
+
+    .MyRecommendationNavigation > h1{
+        width: 63.438vw;
+        margin-left: 0vw;
+    }
+}

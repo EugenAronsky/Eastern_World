@@ -1,0 +1,86 @@
+.HelpPage{
+    width: 100%;
+    display: flex;
+    height: fit-content;
+    padding-top: 3.125vw;
+    padding-bottom: 3.125vw;
+    justify-content: center;
+    position: relative;
+}
+
+.HelpPage > .Background-container > .r-bg{
+    box-shadow: 0 -60vw 10vw 10vw #33333350, 0 -30vw 10vw 10vw #33333360, 0 -20vw 10vw 10vw #33333370, 0 -10vw 10vw 10vw #33333380, 0 -5vw 10vw 10vw #333333;
+}
+
+.top-shadow{
+    width: 100%;
+    height: 56.25vw;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: -1;
+}
+
+.help-container{
+    gap: 1.563vw;
+    display: flex;
+    width: 63.438vw;
+    height: fit-content;
+    flex-direction: column;
+    position: relative;
+}
+
+.help-container > .line{
+    margin: 0;
+    background: #D6BA8D;
+}
+
+.TitleLine{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.563vw;
+    justify-content: space-between;
+}
+
+.TitleLine > h1{
+    margin: 0;
+    position: relative;
+}
+
+.TitleLine > h1::after{
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    content: '';
+    height: 0.052vw;
+    position: absolute;
+    margin-bottom: -1.563vw;
+    background: #D6BA8D;
+}
+
+.PhotoBox{
+    display: flex;
+    width: 63.438vw;
+    position: relative;
+    height: fit-content;
+}
+
+.photoContainer{
+    display: flex;
+    flex-wrap: wrap;
+    transition: .4s;
+    row-gap: 0.729vw;
+    column-gap: 1.563vw;
+}
+
+.note{
+    white-space: pre-line;
+}
+
+.donate_button{
+    cursor: pointer;
+}
+
+.slider_box{
+    display: none;
+}

@@ -53,6 +53,10 @@ header > nav > a:hover{
     color: #D6BA8D;
 }
 
+.activeBurger{
+    color: #D6BA8D !important;
+}
+
 .active:hover{
     color: #D6BA8D;
 }

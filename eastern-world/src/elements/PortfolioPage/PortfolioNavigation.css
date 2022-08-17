@@ -58,6 +58,8 @@
     width: 3.750vw;
     height: 3.750vw;
     align-items: center;
+    cursor: pointer;
+    z-index: 2;
 }
 
 .sortByGenre > :nth-child(2){

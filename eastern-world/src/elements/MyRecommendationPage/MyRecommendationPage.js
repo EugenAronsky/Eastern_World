@@ -16,8 +16,6 @@ const MyRecommendationPage = ({newData}) =>{
     const worksPerPage = screenWidth < 540 ? 7 : 14;
     const step = (14 * (currentPage - 1));
 
-    console.log(tabIndex)
-
     for (let index = 0; index < 99; index++) {
         RecommendationList.push(RecommendationList[0])
         RecommendationList.push(RecommendationList[1])

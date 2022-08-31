@@ -8,7 +8,7 @@ import './EventsPage.css'
 export const pagesData = createContext();
 
 const EventsPage = ({newData}) =>{
-    const Announcement_list = useMemo(()=>SortByData(Object.values(findMyData('announcement', newData))),[Announcement_list]).map((data, i)=><Announcement key={i} data={data}/>);
+    const Announcement_list = useMemo(()=>SortByData(Object.values(findMyData('announcement', newData))), [Announcement_list]).map((data, i)=><Announcement key={i} data={data}/>);
     const [currentPage, setCurrentPage] = useState( 1 );
     const props = {
         //varibles

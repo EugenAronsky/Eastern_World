@@ -42,7 +42,7 @@ const Header = ({upDate}) => {
                 </div>
                 <div className='iconBox'>
                     <div className='iconBoxLine'></div>
-                    <div className='Icon searchIcon'></div>
+                    <div className='Icon searchIcon' onClick={()=>changePageFunction("Search")}></div>
                 </div>
                 <div className='iconBox'>
                     <div className='iconBoxLine'></div>
@@ -55,7 +55,7 @@ const Header = ({upDate}) => {
                                     <div data-google-lang="en" onClick={()=>{localStorage.setItem("language", "EN"); handleClickLang()}} className={ language === "EN" ? "langActive" : ""} translate="no" >EN</div>
                                     <div data-google-lang="iw" onClick={()=>{localStorage.setItem("language", "HA"); handleClickLang()}} className={ language === "HA" ? "langActive" : ""} translate="no" >HA</div>
                                 </div>
-                            <div className='Icon searchIcon' ></div>
+                            <div className='Icon searchIcon' onClick={()=>changePageFunction("Search")}></div>
                             <div className='Icon burgerMenuIcon'  onClick={handleClick}></div>
                         </div>
                         <a className={isActive ? currentPage === "BiographyPage" ? 'show activeBurger' : 'show' : 'hide'} onClick={()=>changePageFunction("BiographyPage")}>БИОГРАФИЯ</a>

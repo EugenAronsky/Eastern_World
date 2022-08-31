@@ -1,0 +1,176 @@
+.SearchPage{
+    margin: 0;
+    width: 100vw;
+    display: flex;
+    min-height: 100vh;
+    position: relative;
+    height: fit-content;
+    align-items: center;
+    background: #202020;
+    flex-direction: column;
+    padding-bottom: 2.604vw;
+    padding-top: 2.604vw;
+    z-index: 100;
+}
+
+.SearchPage > input{
+    color: #fff;
+    width: 63.438vw;
+    height: 3.125vw;
+    background: #333333;
+    font-family: 'Georgia', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.042vw;
+    line-height: 130%;
+    padding: 0.885vw 1.042vw 0.885vw 1.042vw;
+}
+
+.SearchPage > input::-webkit-search-cancel-button{
+    width: 0.833vw;
+    height: 0.833vw;
+    transition: .4s;
+    cursor: pointer;
+    position: relative;
+    background-size: 100%;
+    -webkit-appearance: none;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../img/Union.svg");
+}
+
+.SearchPage > input::-webkit-search-cancel-button:hover{
+    filter: brightness(.6);
+}
+
+.Exit{
+    left: 89.063vw;
+    width: 0.833vw;
+    height: 0.833vw;
+    transition: .4s;
+    cursor: pointer;
+    position: absolute;
+    margin-top: 1.146vw;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../img/Union.svg");
+}
+
+.Exit:hover{
+    filter: brightness(.6);
+}
+
+.SearchResult{
+    gap: 1.615vw;
+    display: flex;
+    width: 63.438vw;
+    margin-top: 2.917vw;
+    height: fit-content;
+    flex-direction: column;
+}
+
+.ResultField{
+    gap: 1.563vw;
+    display: flex;
+    padding: 1.042vw;
+    background: #333333;
+    width: calc(100% - 2.084vw);
+    height: calc(16.667vw - 2.084vw);
+}
+
+.PreviewImage{
+    width: 19.063vw;
+    height: 14.583vw;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.ResultTextBox{
+    gap: 0.521vw;
+    display: flex;
+    width: 40.729vw;
+    flex-direction: column;
+}
+
+
+.ResultTextBox > h1{
+    font-family: 'Georgia', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.667vw;
+    line-height: 1.875vw;
+    color: #D6BA8D;
+}
+
+.InfoLine{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.InfoLine > h1{
+    font-family: 'Exo 2', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.667vw;
+    line-height: 1.979vw;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.InfoLine > h2{
+    font-family: 'Georgia', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.667vw;
+    line-height: 1.875vw;
+    text-align: right;
+    
+    color: #D6BA8D;
+}
+
+.Intro{
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    white-space: pre-line;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+}
+
+.Intro > *{
+    text-align: left !important;
+    font-size: 1.250vw !important;
+    line-height: 120% !important;
+}
+
+.NewButton{
+    display: flex;
+    margin-top: .6vw;
+    justify-content: flex-end;
+}
+
+.NewButton > a {
+    border: none;
+}
+
+.NewButton > a:hover {
+    background-color: transparent;
+}
+
+.NewButton > a:hover > *{
+    color: #A68F6A;
+}
+
+.NewButton > a > * {
+    font-family: 'Georgia', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.938vw;
+    line-height: 1.042vw;
+    letter-spacing: 0.08em;
+    color: #D6BA8D;
+    cursor: pointer;
+    transition: .4s;
+}

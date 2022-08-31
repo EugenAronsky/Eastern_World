@@ -1,0 +1,97 @@
+.Recommendation-page{
+    width: 100%;
+    display: flex;
+    height: fit-content;
+    position: relative;
+    background: #333333;
+    padding-top: 3.125vw;
+    padding-bottom: 3.125vw;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.563vw;
+}
+
+.Recommendation-container{
+    width: 63.438vw;
+    height: fit-content;
+    position: relative;
+}
+
+.recommendation-image{
+    float: left;
+    width: 25.521vw;
+    height: 20.833vw;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 1.563vw;
+    word-wrap: pre-line;
+}
+
+.recommendation-title-page{
+    margin-bottom: 0.521vw;
+    font-family: 'Georgia', sans-serif;
+    font-style: normal; 
+    font-weight: 700;
+    font-size: 1.875vw;
+    line-height: 2.135vw;
+    color: #D6BA8D;
+    white-space: pre-line;
+}
+
+.recommendation-addition{
+    margin-bottom: 1.042vw;
+    font-family: 'Exo 2', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.833vw;
+    line-height: 0.990vw;
+    color: #C4C4C4;
+    white-space: pre-line;
+}
+
+.GoToRecommendationButton{
+    width: 63.438vw;
+    display: flex;
+    justify-content: flex-end
+}
+
+@media only screen and (max-width: 540px) {
+    .Recommendation-page{
+        gap: 6.250vw;
+        padding-top: 9.375vw;
+        padding-bottom: 9.375vw;
+    }
+
+    .Recommendation-container{
+        width: 87.500vw;
+    }
+
+    .recommendation-title-page{
+        margin-bottom: 3.125vw;
+        font-weight: 700;
+        font-size: 4.375vw;
+        line-height: 5vw;
+    }
+
+    .recommendation-addition{
+        font-size: 3.125vw;
+        line-height: 3.750vw;
+        margin-bottom: 6.250vw;
+    }
+
+    .recommendation-image{
+        float: unset;
+        width: 87.500vw;
+        height: 62.500vw;
+        margin-bottom: 6.250vw;
+    }
+
+    .Recommendation-container .full-descripton{
+        text-align: justify !important;
+    }
+    
+    .GoToRecommendationButton{
+        width: 87.500vw;
+    }
+}

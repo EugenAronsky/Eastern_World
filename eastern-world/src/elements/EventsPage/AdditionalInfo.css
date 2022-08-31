@@ -1,0 +1,283 @@
+.vidioBox{
+    gap: 1.563vw;
+    display: flex;
+    width: 63.438vw;
+    position: relative;
+    height: fit-content;
+    flex-direction: column;
+}
+
+.video-react.video-react-fluid{
+    display: flex;
+    align-items: center;
+    padding: 0 !important;
+    justify-content: center;
+    height: 100% !important;
+    width: 41.771vw !important;
+}
+
+.video-react.video-react-fluid > button{
+    top: unset;
+    left: unset;
+    border: none;
+}
+.video-react:hover .video-react-big-play-button{
+    transition: .4s !important;
+}
+
+.video-react.video-react-fluid > button::before{
+    position: relative;
+    color: rgb(214, 186, 141);
+}
+
+.video-react .video-react-big-play-button{
+    font-size: 3vw !important;
+    line-height: 4vw !important;
+    width: 8vw !important;
+    height: 4vw !important;
+}
+
+.video-react > *{
+    box-shadow: none !important;
+}
+
+.video-react-has-started .video-react-control-bar {
+    font-family: "Exo", sans-serif;
+}
+
+.vidioBox > .line{
+    margin: 0;
+    position: relative;
+}
+
+.AdditionalInfo-content > .full-descripton{
+    font-size: 1.250vw;
+    line-height: 120%;
+}
+
+.currentVidioBox{
+    width: 100%;
+    display: flex;
+    height: 23.490vw;
+    position: relative;
+    align-items: center;
+    background: #262626;
+    justify-content: center;
+}
+
+.arrow{
+    margin: 5vw;
+    width: 0.833vw;
+    height: 1.771vw;
+    background-image: url("../img/slide-arrow.svg");
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: .6s;
+}
+
+.arrow:hover{
+    filter: brightness(.7);
+}
+
+.arrow:active{
+    filter: brightness(.5);
+}
+
+.Vidio{
+    height: 100%;
+    width: 41.771vw;
+    background: #fff;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: .8s;
+}
+
+.vidio-slider-box{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 1.563vw;
+}
+
+
+.vidio-slider{
+    right: 0;
+    gap: 1.563vw;
+    display: flex;
+    height: 11.042vw;
+    position: relative;
+    width: fit-content;
+    will-change: right;
+    transition: 1s;
+}
+
+.vidio-slider > *{
+    display: flex;
+    width: 9.271vw;
+    height: 9.271vw;
+    position: relative;
+    align-items: flex-end;
+    background-size: cover;
+    justify-content: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: .8s;
+}
+
+.vidio-slider-box > .line{
+    left: 0;
+    bottom: 0;
+    margin: 0;
+    width: 100%;
+    display: block;
+    height: 0.052vw;
+    position: absolute;
+    margin-bottom: 0.208vw;
+}
+
+.active-vidio{
+    border: 0.052vw solid #D6BA8D;
+}
+
+.vidio-slider > *::after{
+    width: 0;
+    opacity: 0;
+    content: '';
+    height: 0.417vw;
+    position: absolute;
+    background: #D6BA8D;
+    margin-bottom: -1.563vw;
+    bottom: -0.208vw;
+    transition: .8s;
+}
+
+.active-vidio::after{
+    opacity: 1;
+    content: '';
+    width: 5.313vw;
+    height: 0.417vw;
+}
+
+.unfocus-vidio{
+    border: 0.052vw solid #d6ba8d00;
+    filter: brightness(.65);
+}
+
+.Video-player{
+    width: 41.771vw;
+}
+
+.play {
+    align-items: center;
+    justify-content: center;
+}
+
+.play >  *{
+    display: flex;
+    width: 9.271vw;
+    height: 9.271vw;
+    position: relative;
+    align-items: flex-end;
+    background-size: cover;
+    justify-content: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: .8s;
+}
+
+.play::before{
+    font-size: 5vw;
+    content: "\F200";
+    position: absolute;
+    color:  rgba(214, 186, 141, 0.6);
+    font-family: "video-react" !important;
+    z-index: 1;
+}
+
+@media only screen and (max-width: 540px){
+    .AdditionalInfo-content > .full-descripton {
+        font-size: 3.750vw;
+        text-align: left !important;
+    }
+
+    .vidioBox{
+        gap: 6.250vw;
+        padding: 6.250vw;
+        background: #262626;
+        width: calc(100% - 12.5vw);
+    }
+
+    .currentVidioBox{
+        width: 87.500vw;
+        height: 48.750vw;
+    }
+
+    .Vidio{
+        width: 100%;
+    }
+
+    .vidio-slider{
+        gap: 3.125vw;
+        height: calc(25vw + 6.250vw);
+    }
+    
+    .vidio-slider > *{
+        width: 25vw;
+        height: 25vw;
+    }
+
+    .vidio-slider > *::after{
+        width: 0;
+        height: 2.500vw;
+        margin-bottom: -6.250vw;
+        bottom: -1.250vw;
+    }
+
+    .active-vidio::after{
+        content: '';
+        width: 18.750vw;
+        height: 2.500vw;
+    }
+
+    .vidio-slider-box > .line{
+        left: 0;
+        bottom: 0;
+        margin: 0;
+        width: 100%;
+        display: block;
+        height: 0.625vw;
+        position: absolute;
+        margin-bottom: -0.1vw;
+    }
+
+    .play >  *{
+        width: 25vw;
+        height: 25vw;
+    }
+
+    .play::before{
+        font-size: 15vw;
+    }
+
+    .vidio-slider-box{
+        overflow: visible;
+    }    
+
+    .video-react.video-react-fluid {
+        width: 100% !important;
+    }
+
+    .video-react .video-react-big-play-button{
+        font-size: 8vw !important;
+        line-height: 10vw !important;
+        width: 20vw !important;
+        height: 10vw !important;
+    }
+}

@@ -1,0 +1,156 @@
+.Ask{
+    display: flex;
+    gap: 3.125vw;
+    width: 100vw;
+    z-index: 100; 
+    height: 100vh;
+    margin-top: 0;
+    padding: 3.125vw; 
+    position: absolute;
+    align-items: center;
+    background: #202020;  
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Ask > .Btn_Line{
+    margin-top: -1.563vw;
+}
+
+.Title{
+    width: 30.938vw;
+    position: relative;
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3.333vw;
+    line-height: 3.802vw;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.Title::after{
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 0.052vw;
+    bottom: -1.563vw;
+    position: absolute;
+    background: #D6BA8D
+}
+
+.comment_container{
+    gap: 1.563vw;
+    display: flex;
+    width: 41.771vw;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+}
+
+.comment_container > label{
+    font-family: 'Exo 2', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.042vw;
+    line-height: 130%;
+    color: #D6BA8D;
+}
+
+.comment_container > textarea{
+    width: 100%;
+    resize: none;
+    padding: 1.042vw;
+    background: #333333;
+    box-sizing: border-box;
+    border: 0.052vw solid #848484;
+    height: calc(35.417vw - 2.083vw);
+
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.354vw;
+    line-height: 130%;
+    color: #FFFFFF;
+}
+
+.comment_container > textarea::-webkit-scrollbar{
+    width: 0;
+}
+
+.scrollContainer{
+    top: 2.917vw;
+    display: flex;
+    width: 0.417vw;
+    right: -1.563vw;
+    overflow: hidden;
+    position: absolute;
+    justify-content: center;
+    height: calc(35.417vw - 2.083vw);
+}
+
+#customScrollBar{
+    display: flex;
+    width: 0.104vw;
+    background: #848484;
+    justify-content: center;
+    height: calc(35.417vw - 2.083vw);
+}
+
+#custom-track{
+    height: 30%;
+    width: 0.417vw;
+    cursor: pointer;
+    transition: .2s;
+    position: absolute;
+    background: #D6BA8D;
+    will-change: transform;
+}
+
+#custom-track:hover{
+    filter: brightness(.8);
+}
+
+
+@media only screen and (max-width: 540px) {
+    .Ask{
+        gap: 9.375vw;
+        justify-content: unset;
+    }
+
+    .Title{
+        width: 87.500vw;
+        font-size: 8.750vw;
+        line-height: 10vw;
+    }
+    
+    .Title::after{
+        left: 0;
+        height: 0.313vw;
+        bottom: -3.125vw;
+    }
+
+    .comment_container{
+        gap: 3.125vw;
+        width: 87.500vw;
+    }
+    
+    .comment_container > label{
+        font-size: 3.750vw;
+    }
+    
+    .comment_container > textarea{
+        width: 100%;
+        height: 60vh;
+        padding: 6.250vw;
+        border: 0.313vw solid #848484;
+    
+        font-family: 'Georgia';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 3.750vw;
+        line-height: 130%;
+        color: #FFFFFF;
+    }
+}

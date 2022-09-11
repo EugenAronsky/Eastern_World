@@ -8,15 +8,15 @@ import Questions from './Questions.js';
 
 import findMyData from '../Common Elements/UpdateMeneger.js';
 
-const HomePage = ({newData}) =>{
+const HomePage = ({ServerData}) =>{
     return (
         <>
-            <Slider/>
-            <Biography upDate = {findMyData('biography', newData)}/>
-            <ProjectDescription upDate = {findMyData('project', newData)}/>
-            <Portfolio upDate = {{portfolio : findMyData('portfolio', newData), articles : findMyData('article', newData) }}/>
-            <Help upDate = {findMyData('help', newData)}/>
-            <Questions upDate = {findMyData('question', newData)}/>
+            <Slider upDate = {findMyData('article', ServerData)} />
+            <Biography upDate = {findMyData('biography', ServerData)}/>
+            <ProjectDescription upDate = {findMyData('project', ServerData)}/>
+            <Portfolio upDate = {{portfolio : findMyData('portfolio', ServerData), articles : findMyData('article', ServerData) }}/>
+            <Help upDate = {findMyData('help', ServerData)}/>
+            <Questions upDate = {findMyData('question', ServerData)}/>
         </>
     )
 }

@@ -1,6 +1,7 @@
-import React, {useState, useMemo, useContext, memo} from 'react';
+import React, {useState, useMemo, useEffect, memo, useCallback} from 'react';
 import UnpackDescriptionWithLinks from "../Common Elements/UnpackLinks";
 import findMyData from '../Common Elements/UpdateMeneger.js';
+import translate from 'translate';
 import Button from './Button.js'
 import "./Search.css"
 
@@ -12,8 +13,6 @@ const ResultField = ({element}) => {
     const link = ( element.type === 'Рекомендации' ? 'Recommendation' : element.type === 'Анонсы' ? "AdditionalInfo" : element.link );
     const memoUnpackDescription = useMemo( ()=>UnpackDescriptionWithLinks(description), [description] );
 
-    console.log(link)
-
     return (
         <div className='ResultField'>
             <div className='PreviewImage' style={{backgroundImage: `url(${picture.fields.file.url})`}}/>
@@ -23,8 +22,10 @@ const ResultField = ({element}) => {
                     <h2>{element.type}</h2>
                 </div>
                 <h1>{element.title}</h1>
+                <h3 className='Date'>{date}</h3>
                 <div className='Intro'>{memoUnpackDescription}</div>
                 <div className='NewButton'>
+                    <h2>{element.type}</h2>
                     <Button content = "УЗНАТЬ БОЛЬШЕ" width = "fit-content" height = "1.042vw" link={link} change={element}/>
                 </div>
             </div>
@@ -34,7 +35,6 @@ const ResultField = ({element}) => {
 
 const Search = ({props}) =>{    
     const {Data, changePage, previousState, setPreviousState} = props;
-
     const portfolio = Object.values(findMyData('article', Data));
     const announcements = Object.values(findMyData('announcement', Data));
     const recommendation = Object.values(findMyData('recommendation', Data));
@@ -44,18 +44,31 @@ const Search = ({props}) =>{
     recommendation.forEach((element)=>element.type = "Рекомендации");
     
     const [searchField, setSearchField] = useState( '' );
+    const [SearchResult, setSearchResult] = useState( [...portfolio, ...announcements, ...recommendation].map((element, key)=><ResultField key={key} element={element}/>) );
+    
+    const search = async() => {
+        const array = [...portfolio, ...announcements, ...recommendation];
 
-    const search = [...portfolio, ...announcements, ...recommendation].filter((element)=>{
-        return element.title.toLowerCase().includes(searchField.toLowerCase())
-    });
+        array.forEach(async(element)=>
+            element.title = await translate(element.title, {from : "ru", to : localStorage.getItem("language").toLowerCase()})
+        );
+        
+        return array.filter((element)=>{
+            return element.title.toLowerCase().includes(searchField.toLowerCase());
+        });
+    }
 
-    const search_result = search.map((element, key)=><ResultField key={key} element={element}/>)
-
+    useEffect(() => {
+        search()
+        .then(result => result.map((element, key)=><ResultField key={key} element={element}/>))
+        .then(result => setSearchResult(result))
+    }, [searchField]);
+    
     return (
         <div className='SearchPage'>
             <input type="search" onChange={(element)=>setSearchField(element.target.value)}/>
             <div className='Exit' onClick={()=>{changePage(previousState[previousState[previousState.length - 1]]); setPreviousState(previousState)}}></div>
-            <div className='SearchResult'>{search_result}</div>
+            <div className='SearchResult'>{SearchResult}</div>
         </div>
     );
 }

@@ -17,9 +17,14 @@
   background: #555;
 }
 
+header + div{
+  min-height: calc(100vh - 33vw);
+}
+
 @media only screen and (max-width: 540px) {
 
 	header + div{
 		margin-top: 18.7vw;
+    min-height: calc(100vh - 65.5vw);
 	}
 }

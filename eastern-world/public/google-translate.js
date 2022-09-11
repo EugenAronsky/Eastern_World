@@ -40,7 +40,7 @@ function TranslateInit() {
         pageLanguage: googleTranslateConfig.lang,
     });
 
-    // Вешаем событие  клик на флаги
+    // Вешаем событие клик на флаги
     TranslateEventHandler('click', '[data-google-lang]', function (e) {
         TranslateCookieHandler("/" + googleTranslateConfig.lang + "/" + e.getAttribute("data-google-lang"), googleTranslateConfig.domain);
         // Перезагружаем страницу

@@ -15,7 +15,6 @@ const PortfolioWorks = ({data}) => {
     
     // articals array
     let articalsList = Object.values(useContext(amountOfPages).article);
-
     //function
     const setAmountPages = useContext(amountOfPages).setAmountPages;
 
@@ -25,7 +24,7 @@ const PortfolioWorks = ({data}) => {
         articalsList.push(articalsList[1])
         articalsList.push(articalsList[2])
     }
-
+    
     articalsList = useMemo(()=>SortByGaner(articalsList, gener), [gener]);
     useMemo(()=>SortByData(articalsList, sortDataType), [sortDataType]);
     useEffect(()=>setAmountPages(articalsList.length));

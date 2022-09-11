@@ -7,14 +7,14 @@ import './MyRecommendationPage.css'
 
 export const RecommendationWrapper  = createContext();
 
-const MyRecommendationPage = ({newData}) =>{
+const MyRecommendationPage = ({ServerData}) =>{
 
-    const RecommendationList = Object.values(findMyData('recommendation', newData));
+    const RecommendationList = Object.values(findMyData('recommendation', ServerData));
     const [currentPage, setCurrentPage] = useState( 1 );
     const [tabIndex, setTabIndex] = useState( 0 );
     const screenWidth = useContext(windowSize);
     const worksPerPage = screenWidth < 540 ? 7 : 14;
-    const step = (14 * (currentPage - 1));
+    const step = screenWidth > 540 ? (14 * (currentPage - 1)) : (6 * (currentPage - 1));
 
     for (let index = 0; index < 99; index++) {
         RecommendationList.push(RecommendationList[0])

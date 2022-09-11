@@ -2,9 +2,9 @@ import React, { memo } from "react";
 import FullBiography from "./FullBiography";
 import findMyData from '../Common Elements/UpdateMeneger.js';
 
-const BiographyPage = ({newData}) => {
+const BiographyPage = ({ServerData}) => {
     return(
-        <FullBiography upDate = {{biography: findMyData('biography', newData), bio_paragraph: findMyData('bio_paragraph', newData)}}/>
+        <FullBiography upDate = {{biography: findMyData('biography', ServerData), bio_paragraph: findMyData('bio_paragraph', ServerData)}}/>
     );
 };
 

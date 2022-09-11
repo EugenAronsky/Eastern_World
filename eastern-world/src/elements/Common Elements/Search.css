@@ -174,3 +174,110 @@
     cursor: pointer;
     transition: .4s;
 }
+.NewButton > h2, .Date {
+    display: none;
+}
+
+@media only screen and (max-width: 540px) {
+
+    .SearchPage{
+        padding-top: 18.750vw;
+        padding-bottom: 9.375vw;
+    }
+
+    .SearchPage > input{
+        width: 87.500vw;
+        height: 9.375vw;
+        font-size: 3.750vw;
+        padding: 2.188vw 3.125vw 2.188vw 3.125vw;
+    }
+
+    .Exit{
+        width: 4vw;
+        height: 4vw;
+        top: 7.188vw;
+        left: 88.438vw;
+    }
+
+    .SearchResult{
+        gap: 6.250vw;
+        width: 87.500vw;
+        margin-top: 6.250vw;
+    }
+
+    .ResultField{
+        gap: 6.250vw;
+        padding: 6.250vw;
+        height: fit-content;
+        flex-direction: column;
+        width: calc(100% - 12.5vw);
+        min-height: calc(127.188vw - 12.5vw);
+    }
+
+    .PreviewImage{
+        width: 75vw;
+        height: 56.250vw;
+    }
+
+    .ResultTextBox{
+        width: 75vw;
+        gap: 3.125vw;
+        display: flex;
+    }
+
+    .ResultTextBox > h1{
+        line-height: 5vw;
+        font-size: 4.375vw;
+    }
+
+    .Intro{
+        -webkit-line-clamp: 7;
+    }
+
+    .Intro > *{
+        text-align: left !important;
+        font-size: 3.750vw !important;
+        line-height: 120% !important;
+    }
+
+    .InfoLine {
+        display: none;
+    }
+    
+    .Date{
+        font-size: 3.125vw;
+        line-height: 3.750vw;
+        font-family: 'Exo 2', sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        color: rgba(255, 255, 255, 0.8);
+    }
+    
+    .NewButton{
+        display: flex;
+        margin-top: 3.125vw;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .NewButton > h2{
+        font-size: 3.125vw;
+        line-height: 3.438vw;
+        font-family: 'Georgia', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        text-align: right;
+        color: #D6BA8D;
+    }
+
+    .NewButton > a > * {
+        font-size: 3.125vw;
+        line-height: 3.438vw;
+    }
+
+    .SearchPage > input::-webkit-search-cancel-button{
+        width: 3vw;
+        height: 3vw;
+    }
+    
+}

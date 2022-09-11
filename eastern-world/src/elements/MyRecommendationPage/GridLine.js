@@ -3,12 +3,12 @@ import UpdateManeger from '../Common Elements/UnpackUpdate.js';
 import { RecommendationWrapper } from "./MyRecommendationPage";
 import './GridLine.css';
 import './GridLine-adaptive.css';
-import {Data} from "../App";
+import {ShareData} from "../App";
 
 const GridLine = ({list}) =>{
     const {elements, columns, grid} = list;
-    const changePage = useContext(Data)[1];
-    const PageInfo = useContext(Data)[2];
+    const changePage = useContext(ShareData)[1];
+    const PageInfo = useContext(ShareData)[2];
     const tabIndex = useContext(RecommendationWrapper).tabIndex;
     const [focusElement, setFocusElement] = useState(null);
 

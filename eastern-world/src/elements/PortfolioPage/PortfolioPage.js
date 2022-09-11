@@ -8,7 +8,7 @@ import { windowSize } from "../App";
 
 export const amountOfPages = createContext();
 
-const PortfolioPage = ({newData}) =>{
+const PortfolioPage = ({ServerData}) =>{
     const [pages, setAmountPages] = useState( 1 );
     const [gener, setGener] = useState("Аналитика");
     const [currentPage, setCurrentPage] = useState(1);
@@ -19,7 +19,7 @@ const PortfolioPage = ({newData}) =>{
     const properties = {
         
         // articals object
-        article: useCallback(findMyData('article', newData), [newData]),
+        article: useCallback(findMyData('article', ServerData), [ServerData]),
 
         // variables
         gener: gener,

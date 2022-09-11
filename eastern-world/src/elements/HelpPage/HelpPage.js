@@ -8,14 +8,14 @@ import Fund from "./Fund.js";
 import './HelpPage.css';
 import './HelpPage-adaptive.css'
 
-const HelpPage = ({newData}) =>{
+const HelpPage = ({ServerData}) =>{
 
-    const helpInfo = useCallback(findMyData('help', newData), [newData]);
+    const helpInfo = useCallback(findMyData('help', ServerData), [ServerData]);
     const {background_image, first_description, second_description, note} = helpInfo;
-    const photosList = useCallback(Object.values(findMyData('photo_for_help_page', newData), [newData]));
+    const photosList = useCallback(Object.values(findMyData('photo_for_help_page', ServerData), [ServerData]));
     const memoUnpackFirstPart = useMemo(()=>UnpackDescriptionWithLinks(first_description), [first_description]);
     const memoUnpackSecondPart = useMemo(()=>UnpackDescriptionWithLinks(second_description), [second_description]);
-    const fundsList = useCallback(Object.values(findMyData('fund', newData), [newData]));
+    const fundsList = useCallback(Object.values(findMyData('fund', ServerData), [ServerData]));
     const memoUnpackNote = useMemo(()=>UnpackDescriptionWithLinks(note, true), [note]);
     const screenWidth = useContext(windowSize);
     const [currentSlide, setCurrentSlide] = useState( 0 );

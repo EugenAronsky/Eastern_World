@@ -53,7 +53,7 @@ const Questions = ({upDate}) => {
 
 
             <div className = "question-button">
-                {screenWidth <= 540 ? <Button content = "ПЕРЕЙТИ К РАЗДЕЛУ" width = "46.875vw" height = "9.375vw" link={''}/> : <Button content = "ПЕРЕЙТИ К РАЗДЕЛУ" width = "15.625vw" height = "3.125vw" link={''}/>}
+                {screenWidth <= 540 ? <Button content = "ПЕРЕЙТИ К РАЗДЕЛУ" width = "46.875vw" height = "9.375vw" link={'QuestionsPage'}/> : <Button content = "ПЕРЕЙТИ К РАЗДЕЛУ" width = "15.625vw" height = "3.125vw" link={'QuestionsPage'}/>}
             </div>
         </div>
     );

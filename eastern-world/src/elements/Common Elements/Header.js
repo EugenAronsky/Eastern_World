@@ -6,6 +6,7 @@ import "./Header_Adaptive.css"
 const Header = ({upDate}) => {
     const {logo} = upDate[0];
     const changePageFunction = upDate[1];
+    const help_title = upDate[2].title.toUpperCase();
 
     const [isActive, setIsActive] = useState(false);
     const [isActiveLang, setIsActiveLang] = useState(false);
@@ -62,8 +63,8 @@ const Header = ({upDate}) => {
                         <a className={isActive ? currentPage === "PortfolioPage" ? 'show activeBurger A-line' : 'show A-line' : 'hide'} onClick={()=>changePageFunction("PortfolioPage")}>ПОРТФОЛИО</a>
                         <a className={isActive ? currentPage === "EventsPage" ? 'show activeBurger A-line' : 'show A-line' : 'hide'} onClick={()=>changePageFunction("EventsPage")}>МЕРОПРИЯТИЯ</a>
                         <a className={isActive ? currentPage === "MyRecommendationPage" ? 'show activeBurger A-line' : 'show A-line' : 'hide'} onClick={()=>changePageFunction("MyRecommendationPage")}>РЕКОМЕНДАЦИИ</a>
-                        <a className={isActive ? currentPage === "QuestionPage" ? 'show activeBurger A-line' : 'show A-line' : 'hide'} onClick={()=>changePageFunction("QuestionPage")}>ВОПРОС/ОТВЕТ</a>
-                        <a className={isActive ? currentPage === "HelpPage" ? 'show activeBurger A-line' : 'show A-line' : 'hide'} onClick={()=>changePageFunction("HelpPage")}>ПОМОЩЬ УКРАИНЕ</a>
+                        <a className={isActive ? currentPage === "QuestionsPage" ? 'show activeBurger A-line' : 'show A-line' : 'hide'} onClick={()=>changePageFunction("QuestionsPage")}>ВОПРОС/ОТВЕТ</a>
+                        <a className={isActive ? currentPage === "HelpPage" ? 'show activeBurger A-line' : 'show A-line' : 'hide'} onClick={()=>changePageFunction("HelpPage")}>{help_title}</a>
                         <a className={isActive ? currentPage === "ContactsPage" ? 'show activeBurger A-line' : 'show A-line' : 'hide'} onClick={()=>changePageFunction("HomePage")}>КОНТАКТЫ</a>
                         <a className={isActive ? 'show tg' : 'hide tg'} target="blank" href="https://t.me/eastern_world"></a>
                     </nav>  

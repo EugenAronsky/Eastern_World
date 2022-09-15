@@ -67,7 +67,7 @@
     justify-content: space-between;
 }
 
-.buttons-box > .button > div{
+.buttons-box > .button{
     font-family: 'Georgia';
     font-style: normal;
     font-weight: 400;

@@ -126,7 +126,6 @@
     font-size: 1.667vw;
     line-height: 1.875vw;
     text-align: right;
-    
     color: #D6BA8D;
 }
 
@@ -159,11 +158,15 @@
     background-color: transparent;
 }
 
-.NewButton > a:hover > *{
-    color: #A68F6A;
+.NewButton > a:hover{
+    color: #A68F6A ;
 }
 
-.NewButton > a > * {
+.NewButton > a:active{
+    border: none;
+}
+
+.NewButton > a {
     font-family: 'Georgia', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -174,6 +177,7 @@
     cursor: pointer;
     transition: .4s;
 }
+
 .NewButton > h2, .Date {
     display: none;
 }

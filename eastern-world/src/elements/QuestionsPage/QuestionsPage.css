@@ -41,6 +41,7 @@
     gap: 1.563vw;
     display: flex;
     padding: 1.563vw;
+    position: relative;
     height: fit-content;
     background: #262626;
     box-sizing: border-box;
@@ -72,6 +73,8 @@
 }
 
 .CommentContent > h2{
+    white-space: pre-wrap;
+    white-space: pre-line;
     font-family: 'Georgia', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -115,6 +118,10 @@
         padding: 6.250vw;
         flex-direction: column;
         border-bottom: 0.313vw solid #D6BA8D;
+    }
+
+    .QuestionsList{
+        gap: 3.125vw;
     }
 
     .CommentBox > h2{

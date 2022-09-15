@@ -81,6 +81,20 @@
     cursor: pointer;
 }
 
+.donate_button > *{
+    pointer-events: none;
+}
+
+.donate_button:hover > .button{
+    color: #333333;
+    background: #D6BA8D;
+}
+
+.donate_button:active > .button{
+    border: 0.052vw solid #D6BA8D;
+    background: rgba(214, 186, 141, 0.8);
+}
+
 .slider_box{
     display: none;
 }

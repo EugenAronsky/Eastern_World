@@ -7,7 +7,7 @@
     transition: .8s;
 }
 
-.button > div{
+.button{
     font-family: 'Georgia';
     font-style: normal;
     font-weight: 400;
@@ -26,8 +26,9 @@
     border: 0.052vw solid #D6BA8D;
     background: rgba(214, 186, 141, 0.8);
 }
+
 @media only screen and (max-width: 540px) {
-    .button > div{
+    .button{
         font-size: 3.125vw;
     }
 }

@@ -1,11 +1,13 @@
 import { loadCaptchaEnginge, LoadCanvasTemplate, LoadCanvasTemplateNoReload, validateCaptcha } from 'react-simple-captcha';
 import React, { useState, memo, useEffect, useContext, useMemo, useCallback} from "react";
 import Button from "../Common Elements/Button.js";
+import { useNavigate } from 'react-router-dom';
 import { windowSize } from "../App"; 
+import axios from 'axios';
 import './Ask.css';
 
 const Ask = ({props}) => {
-    const {Data, changePage, previousState, setPreviousState} = props;
+    const {Data, changePage, questionData, previousState, setPreviousState, setQuestionData} = props;
     const screenWidth = useContext(windowSize);
     const [grab, setGrab] = useState( false );
     const [mouseY, setMouseY] = useState( 0 );
@@ -15,7 +17,8 @@ const Ask = ({props}) => {
     const [current_track_position, set_current_track_position] = useState( 0 );
     const [scrollTargetInfo, setScrollTargetInfo] = useState( null ) 
     const [track_height, set_track_height] = useState( 0 ) 
-
+    const months = ["января", "февраля", "марта", "апреля", "мая", "июня", "июля", "августа", "сентября", "октября", "ноября", "декабря"];
+    const navigate = useNavigate()
     const customScroll = (target) =>{
         setScrollTargetInfo(target); 
         set_scroll_space( target.scrollHeight - target.clientHeight );
@@ -115,6 +118,39 @@ const Ask = ({props}) => {
     }, [])
     
     window.requestAnimationFrame(trackMove);
+        
+    const sendQuestion  = async() =>{
+        const textarea = document.getElementById("comment");
+        const sendButton = document.getElementById("btn_send");
+        if(textarea.value !== ''){
+            sendButton.style.pointerEvents = "none";
+            const today = new Date();
+            const date = `${today.getDate()} ${(months[today.getMonth()])} ${today.getFullYear()}`;
+            await axios.post("http://localhost:8000/api/addNewComment", {
+                firstName: questionData.firstName.value,
+                lastName: questionData.lastName.value,
+                mail: questionData.mail.value,
+                date: date,
+                question: document.getElementById("comment").value,
+            }).then((response)=>{
+                console.log(response.data.massage)
+                if( response.data.massage === 'Server error'){
+                    navigate("/error");
+                }
+                else if( response.data.massage !== "Oops, incorrect mail"){
+                    alert(response.data.massage);
+                    navigate("/questions");
+                }
+                else{
+                    alert(response.data.massage);
+                }
+            });
+        }
+        else{
+            textarea.style.animationName = "refuse_input";
+            textarea.addEventListener("animationend", ()=>{ textarea.style.animationName = "" });
+        }
+    } 
 
     return(
         <div className='Ask'>
@@ -129,8 +165,8 @@ const Ask = ({props}) => {
                 </div>
             </form>
             <div className='Btn_Line'>
-                {screenWidth > 540 ? <div onClick={()=>{changePage("Inquire"); setPreviousState(previousState)}}><Button content = "ОТМЕНА" width = "10.833vw" height = "3.125vw" link={'Inquire'}/></div> : <div onClick={()=>{changePage("Inquire"); setPreviousState(previousState)}}><Button content = "ОТМЕНА" width = "40.625vw" height = "9.375vw" link={'Inquire'}/></div>}
-                {screenWidth > 540 ? <div><Button content = "ОТПРАВИТЬ" width = "13.125vw" height = "3.125vw" link={'Inquire'}/></div> : <div><Button content = "ОТПРАВИТЬ" width = "40.625vw" height = "9.375vw" link={'Inquire'}/></div>}
+                {screenWidth > 540 ? <Button content = "ОТМЕНА" width = "10.833vw" height = "3.125vw" link={'/questions/inquire'}/> : <Button content = "ОТМЕНА" width = "40.625vw" height = "9.375vw" link={'/questions/inquire'}/>}
+                {screenWidth > 540 ? <div id="btn_send" onClick={()=>sendQuestion()}><Button content = "ОТПРАВИТЬ" width = "13.125vw" height = "3.125vw" link={'/questions/ask'}/></div> : <div id="btn_send" onClick={()=>sendQuestion()}><Button content = "ОТПРАВИТЬ" width = "40.625vw" height = "9.375vw" link={'/questions/ask'}/></div>}
             </div>
         </div>
     );

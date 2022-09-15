@@ -20,12 +20,6 @@ const HelpPage = ({ServerData}) =>{
     const screenWidth = useContext(windowSize);
     const [currentSlide, setCurrentSlide] = useState( 0 );
 
-    photosList.push(photosList[0]);
-    photosList.push(photosList[0]);
-    photosList.push(photosList[0]);
-    photosList.push(photosList[0]);
-    photosList.push(photosList[0]);
-
     const photos = photosList.map((info, i)=><Photo key={i} info={info}/>);
     const funds = fundsList.map((info, i)=><Fund key={i} info={info}/>);
     const dots = photosList.map((info, i)=><div onClick={()=>setCurrentSlide( i )} className={currentSlide === i? "active_slide" : ""} key={i}/>);
@@ -51,8 +45,8 @@ const HelpPage = ({ServerData}) =>{
                             { photos }
                         </div>
                     </div>
-                    <div className={ photosList.length < 12 ? "slider_box" : "slider_box slider_box_hidden" }>
-                        <div className="slider_photo" style={ currentSlide > 1 && photosList.length - (currentSlide - 1) > 10 ? {transform: "translate(" + ( -8.050 * (currentSlide - 1) ) + "vw)"} :  currentSlide > 1 ? {transform: "translate(" + ( -8.050 * ( photosList.length - 11) ) + "vw)"} : {}} >{ dots }</div>
+                    <div className={ photosList.length < 12 ? "slider_box" : "slider_box slider_box_hidden" } style={photosList.length > 1 ? {} : {display:"none"}}>
+                        <div className="slider_photo" style={ photosList.length > 11 ? currentSlide > 1 && photosList.length - (currentSlide - 1) > 10 ? {transform: "translate(" + ( -8.050 * (currentSlide - 1) ) + "vw)"} :  currentSlide > 1 ? {transform: "translate(" + ( -8.050 * ( photosList.length - 11) ) + "vw)"} : {} : {}} >{ dots }</div>
                     </div>
                 {memoUnpackSecondPart}
                 <div className="line"></div>

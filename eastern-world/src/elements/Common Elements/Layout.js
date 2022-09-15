@@ -11,7 +11,7 @@ const Layout = ({children}) =>{
 
     return (
         <>
-            <Header upDate = {[findMyData('header', ServerData), data[1], findMyData('help', ServerData)]} />
+            <Header upDate = {[findMyData('header', ServerData), data[1], findMyData('help', ServerData), children.props.children.props.children]} />
                 {children}
             <Footer upDate = {findMyData('footer', ServerData)}/>       
         </>

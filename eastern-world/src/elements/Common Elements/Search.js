@@ -1,6 +1,7 @@
 import React, {useState, useMemo, useEffect, memo, useCallback} from 'react';
 import UnpackDescriptionWithLinks from "../Common Elements/UnpackLinks";
 import findMyData from '../Common Elements/UpdateMeneger.js';
+import { useNavigate } from 'react-router-dom';
 import translate from 'translate';
 import Button from './Button.js'
 import "./Search.css"
@@ -10,9 +11,9 @@ const ResultField = ({element}) => {
 
     const date = ( typeof element.date !== 'undefined' ? element.date : element.addition ).split(',')[0];
     const description = ( typeof element.description !== 'undefined' ? element.description : element.text );
-    const link = ( element.type === 'Рекомендации' ? 'Recommendation' : element.type === 'Анонсы' ? "AdditionalInfo" : element.link );
+    const link = ( element.type === 'Рекомендации' ? '/recommendation/info' : element.type === 'Анонсы' ? "/events/info" : element.link );
     const memoUnpackDescription = useMemo( ()=>UnpackDescriptionWithLinks(description), [description] );
-
+    const outside = link.includes("http");
     return (
         <div className='ResultField'>
             <div className='PreviewImage' style={{backgroundImage: `url(${picture.fields.file.url})`}}/>
@@ -26,7 +27,7 @@ const ResultField = ({element}) => {
                 <div className='Intro'>{memoUnpackDescription}</div>
                 <div className='NewButton'>
                     <h2>{element.type}</h2>
-                    <Button content = "УЗНАТЬ БОЛЬШЕ" width = "fit-content" height = "1.042vw" link={link} change={element}/>
+                    <Button content = "УЗНАТЬ БОЛЬШЕ" width = "fit-content" height = "1.042vw" link={link} change={element} outside={outside} target={outside ? "_blank" : "_self"}/>
                 </div>
             </div>
         </div>
@@ -34,10 +35,11 @@ const ResultField = ({element}) => {
 }
 
 const Search = ({props}) =>{    
-    const {Data, changePage, previousState, setPreviousState} = props;
+    const {Data} = props;
     const portfolio = Object.values(findMyData('article', Data));
     const announcements = Object.values(findMyData('announcement', Data));
     const recommendation = Object.values(findMyData('recommendation', Data));
+    const navigate = useNavigate();
 
     portfolio.forEach((element)=>element.type = "Портфолио");
     announcements.forEach((element)=>element.type = "Анонсы");
@@ -67,7 +69,7 @@ const Search = ({props}) =>{
     return (
         <div className='SearchPage'>
             <input type="search" onChange={(element)=>setSearchField(element.target.value)}/>
-            <div className='Exit' onClick={()=>{changePage(previousState[previousState[previousState.length - 1]]); setPreviousState(previousState)}}></div>
+            <div className='Exit' onClick={()=>{navigate(-1)}}></div>
             <div className='SearchResult'>{SearchResult}</div>
         </div>
     );

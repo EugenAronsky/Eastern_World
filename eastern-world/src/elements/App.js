@@ -1,4 +1,5 @@
-import React, {useState, createContext, useMemo, useEffect,  memo} from 'react';
+import React, {useState, createContext, useMemo, useEffect, memo} from 'react';
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import HomePage from './HomePage/HomePage';
 import findMyData from './Common Elements/UpdateMeneger';
 import BiographyPage from './BiographyPage/BiographyPage';
@@ -9,9 +10,11 @@ import Layout from './Common Elements/Layout.js';
 import HelpPage from './HelpPage/HelpPage.js';
 import Recommendation from './MyRecommendationPage/Recommendation.js';
 import AdditionalInfo from './EventsPage/AdditionalInfo';
+import ErrorPage from './Common Elements/ErrorPage';
 import Search from './Common Elements/Search';
 import QuestionsPage from './QuestionsPage/QuestionsPage';
 import Inquire from './QuestionsPage/Inquire';
+import Answer from './QuestionsPage/Answer';
 import Ask from './QuestionsPage/Ask';
 import "./App.css"
 // import translate from "../../../node_modules/translate"
@@ -20,7 +23,6 @@ export const ShareData = createContext();
 export const windowSize = createContext();
 
 const App = ({Data}) => {
-   
     const [ServerData, setServerData] = useState( Data );
 
     // const startTranslate = async() => { 
@@ -56,9 +58,8 @@ const App = ({Data}) => {
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
     const [PageInfo, setPageInfo] = useState(Object.values(currentPage === "Recommendation" ? findMyData("recommendation", ServerData) : findMyData("announcement", ServerData))[0] );
     const [previousState, setPreviousState] = useState(["HomePage"]);
-    const [newPage, setNewPage]  = useState(false);
-    const [flag, setFlag] = useState(false);
-    console.log(previousState)
+    const [questionData, setQuestionData] = useState(null);
+
     window.addEventListener("resize", ()=>{
         setScreenWidth(window.innerWidth);
     });
@@ -81,121 +82,42 @@ const App = ({Data}) => {
         setPageInfo( info );
     }
 
-    const SavePrevState = (name) => {
-        setPreviousState((prevState)=>{
-            if(prevState[prevState.length - 1] !== name) return [...prevState, name];
-            else return[...prevState];
-        });
-    }
-
-    const searchProps = {
+    const common_props = {
         Data: ServerData,
+        PageInfo: PageInfo,
+        ServerData: ServerData,
         changePage: changePage,
+        questionData: questionData,
         previousState: previousState,
+        setQuestionData: setQuestionData,
         setPreviousState: (array)=>setPreviousState(array.slice(0, -1)),
     }
 
-    function renderSwitch(param){
-        switch (param) {
-            case "HomePage":
-                SavePrevState("HomePage");
-                setNewPage((current)=> current = !current)
-                return <HomePage ServerData = {ServerData}/>
-        
-            case "BiographyPage":
-                SavePrevState("BiographyPage");
-                setNewPage((current)=> current = !current)
-                return <BiographyPage ServerData = {ServerData}/>
-
-            case "PortfolioPage":
-                SavePrevState("PortfolioPage");
-                setNewPage((current)=> current = !current)
-                return <PortfolioPage ServerData = {ServerData}/>
-
-            case "MyRecommendationPage":
-                SavePrevState("MyRecommendationPage");
-                setNewPage((current)=> current = !current)
-                return <MyRecommendationPage ServerData = {ServerData}/>
-
-            case "EventsPage":
-                SavePrevState("EventsPage");
-                setNewPage((current)=> current = !current)
-                return <EventsPage ServerData = {ServerData}/>
-            
-            case "HelpPage":
-                SavePrevState("HelpPage");
-                setNewPage((current)=> current = !current)
-                return <HelpPage ServerData = {ServerData}/>
-
-            case "Recommendation":
-                SavePrevState("Recommendation");
-                setNewPage((current)=> current = !current)
-                return <Recommendation info = {PageInfo}/>
-
-            case "AdditionalInfo":
-                SavePrevState("AdditionalInfo");
-                setNewPage((current)=> current = !current)
-                return <AdditionalInfo info = {PageInfo}/>
-                
-            case "Search":
-                SavePrevState("Search");
-                setNewPage((current)=> current = !current)
-                return <Search props = {searchProps}/>
-
-            case "QuestionsPage":
-                SavePrevState("QuestionsPage");
-                setNewPage((current)=> current = !current)
-                return <QuestionsPage/>
-
-            case "Inquire":
-                SavePrevState("Inquire");
-                setNewPage((current)=> current = !current)
-                return <Inquire props = {searchProps}/>
-
-            case "Ask":
-                SavePrevState("Ask");
-                setNewPage((current)=> current = !current)
-                return <Ask props = {searchProps}/>
-                
-            default:
-                return <HomePage ServerData = {ServerData}/>
-        }
-    }
-
-    window.onpopstate = function(event) {
-        event.preventDefault();
-        setFlag((current)=>current = !current);
-        setPreviousState(previousState.slice(0, -1));
-    };
-
-    useEffect(() => {
-        changePage(previousState[previousState.length - 1]);
-        if(previousState.length === 0) {
-            window.history.back()
-        };
-    }, [flag]);
-
-    useEffect(() => {
-        window.history.pushState( previousState[previousState.length - 1], window.location.href);
-        // console.log(window.history.state);
-    }, [newPage]);
-
-    const page = useMemo(()=>renderSwitch(currentPage), [currentPage])
-    
     return (
-        <ShareData.Provider value = {[ServerData, changePage, changeWorkPageInfo]}>
-            {currentPage !== "Search" ?
+        <Router>
+            <ShareData.Provider value = {[ServerData, changePage, changeWorkPageInfo]}>
                 <Layout>
                     <windowSize.Provider value={screenWidth}>
-                        {page}
+                        <Routes>
+                            <Route key = "HomePage" exact path="/" element={<HomePage ServerData = {ServerData}/>}/>
+                            <Route key = "BiographyPage" exact path="/biography" element={<BiographyPage ServerData = {ServerData}/>}/>
+                            <Route key = "PortfolioPage" exact path="/portfolio" element={<PortfolioPage ServerData = {ServerData}/>}/>
+                            <Route key = "EventsPage" exact path="/events" element={<EventsPage ServerData = {ServerData}/>}/>
+                            <Route key = "MyRecommendationPage" exact path="/recommendation" element={<MyRecommendationPage ServerData = {ServerData}/>}/>
+                            <Route key = "HelpPage" exact path="/help" element={<HelpPage ServerData = {ServerData}/>}/>
+                            <Route key = "Recommendation" exact path="/recommendation/info" element={<Recommendation info = {PageInfo}/>}/>
+                            <Route key = "AdditionalInfo" exact path="/events/info" element={<AdditionalInfo info = {PageInfo}/>}/>
+                            <Route key = "QuestionsPage" exact path="/questions" element={<QuestionsPage  props = {common_props}/>}/>
+                            <Route key = "Inquire" exact path="/questions/inquire" element={<Inquire props = {common_props}/>}/>
+                            <Route key = "Answer" exact path="/questions/answer" element={<Answer props = {common_props}/>}/>
+                            <Route key = "Ask" exact path="/questions/ask" element={<Ask props = {common_props}/>}/>
+                            <Route key = "Search" exact path="/search" element={<Search props = {common_props}/>}/>
+                            <Route key = "Error" exact path="/error" element={<ErrorPage/>}/>
+                        </Routes>
                     </windowSize.Provider>
                 </Layout>
-            :
-                <windowSize.Provider value={screenWidth}>
-                    {page}
-                </windowSize.Provider>
-            }
-        </ShareData.Provider>
+            </ShareData.Provider>
+        </Router>
    );
 }
 

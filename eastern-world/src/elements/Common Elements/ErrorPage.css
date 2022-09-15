@@ -1,0 +1,23 @@
+.Error{
+    top: 0;
+    left: 0;
+    margin: 0;
+    width: 100vw;
+    z-index: 100;
+    height: 100vh;
+    display: flex;
+    position: absolute;
+    background: #202020;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Exo 2', sans-serif;
+    color: #D6BA8D;
+    font-size: 15vw;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 540px) {
+    .Error{
+        font-size: 30vw;
+    }
+}

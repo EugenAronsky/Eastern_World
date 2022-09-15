@@ -1,14 +1,16 @@
 import { loadCaptchaEnginge, LoadCanvasTemplate, LoadCanvasTemplateNoReload, validateCaptcha } from 'react-simple-captcha';
 import React, { useState, memo, useEffect, useContext, useMemo, useCallback} from "react";
 import Button from "../Common Elements/Button.js";
+import { useNavigate } from 'react-router-dom';
 import { windowSize } from "../App"; 
 import './Inquire.css';
 
 const Inquire = ({props}) =>{
-    const {Data, changePage, previousState, setPreviousState} = props;
+    const {Data, changePage, previousState, questionData, setPreviousState, setQuestionData} = props;
     const [reCAPTCHA_result, setReCAPTCHA_result] = useState( false );
     const [reCAPTCHA, setReCAPTCHA] = useState( false );
     const screenWidth = useContext(windowSize);
+    const navigate = useNavigate();
     let passed = true;
 
     const check_reCAPTCHA = (user_captcha_value) => {
@@ -41,7 +43,7 @@ const Inquire = ({props}) =>{
             sname.addEventListener("animationend", ()=>{ sname.style.animationName = "" });
         }
 
-        if(mail.value === '') {
+        if(mail.value === '' || mail.value.includes('@') === false) {
             passed = false;
             mail.style.animationName = "refuse_input";
             mail.addEventListener("animationend", ()=>{ mail.style.animationName = "" });
@@ -53,12 +55,18 @@ const Inquire = ({props}) =>{
             reCAPTCHA_text.addEventListener("animationend", ()=>{ reCAPTCHA_text.style.animationName = "" });
         }
 
-        if(passed) changePage("Ask");
+        if(passed){
+            setQuestionData({
+                firstName: fname,
+                lastName: sname,
+                mail: mail,
+            })
+            navigate("/questions/ask");
+        } 
     }
 
-
     useEffect (() => { 
-        {screenWidth > 540 ? loadCaptchaEnginge(6, '#202020', '#848484', "1.250vw Georgia") :  loadCaptchaEnginge(6, '#202020', '#848484', "4.5vw Georgia")};  
+        {screenWidth > 540 ? loadCaptchaEnginge(6, '#202020', '#848484', "1.5vw Georgia") :  loadCaptchaEnginge(6, '#202020', '#848484', "4.5vw Georgia")};  
     }, []);
     
     return (
@@ -67,10 +75,10 @@ const Inquire = ({props}) =>{
                 <h1 className="formTitle">Ваши данные</h1>
                 <form className="formContainer">
                     <label>Ваше имя и фамилия</label>
-                        <input type="text" id="Fname" name="Fname" placeholder="Имя"/>
-                        <input type="text" id="Sname" name="Sname" placeholder="Фамилия"/>
+                        <input type="text" id="Fname" name="Fname" placeholder="Имя" autoComplete="off" defaultValue={questionData !== null ? questionData.firstName.value : ''}/>
+                        <input type="text" id="Sname" name="Sname" placeholder="Фамилия" autoComplete="off" defaultValue={questionData !== null ? questionData.lastName.value : ''}/>
                     <label>Адрес электронной почты</label>
-                        <input type="text" id="mail" name="mail" placeholder="Почта"/>
+                        <input type="text" id="mail" name="mail" placeholder="Почта" autoComplete="off" defaultValue={questionData !== null ? questionData.mail.value : ''}/>
                 </form>
                 <div className='reCAPTCHA' onClick={()=>{if(!reCAPTCHA_result) setReCAPTCHA((current)=> current = !current)}}>
                     <div id="reCAPTCHA_text" className='reCAPTCHA_Text' style={reCAPTCHA_result ? {cursor : "default", borderColor: "green", color: "green"} : {}}>
@@ -79,14 +87,14 @@ const Inquire = ({props}) =>{
                     </div>
                 </div>
                 <div className='Btn_Line'>
-                    {screenWidth > 540 ? <div onClick={()=>{changePage("QuestionsPage"); setPreviousState(previousState)}}><Button content = "ОТМЕНА" width = "10.833vw" height = "3.125vw" link={'Inquire'}/></div> : <div onClick={()=>{changePage("QuestionsPage"); setPreviousState(previousState)}}><Button content = "ОТМЕНА" width = "40.625vw" height = "9.375vw" link={'Inquire'}/></div>}
-                    {screenWidth > 540 ? <div onClick={()=>{check_form()}}><Button content = "ЗАДАТЬ ВОПРОС" width = "13.125vw" height = "3.125vw" link={'Inquire'}/></div> : <div onClick={()=>{check_form()}}><Button content = "ЗАДАТЬ ВОПРОС" width = "40.625vw" height = "9.375vw" link={'Inquire'}/></div>}
+                    {screenWidth > 540 ? <Button content = "ОТМЕНА" width = "10.833vw" height = "3.125vw" link={'/questions'}/> : <Button content = "ОТМЕНА" width = "40.625vw" height = "9.375vw" link={'/questions'}/>}
+                    {screenWidth > 540 ? <div onClick={()=>{check_form()}}><Button content = "ЗАДАТЬ ВОПРОС" width = "13.125vw" height = "3.125vw" link={'/questions/inquire'}/></div> : <div onClick={()=>{check_form()}}><Button content = "ЗАДАТЬ ВОПРОС" width = "40.625vw" height = "9.375vw" link={'/questions/inquire'}/></div>}
                 </div>
             </div>
 
             <div className='reCAPTCHA-Box' style={reCAPTCHA ? {display: `flex`}: {display: `none`}}>
                 <LoadCanvasTemplate reloadColor="#00000000"/> 
-                <input type="text" id="reCAPTCHA" name="reCAPTCHA" placeholder="Введите символы выше"/>
+                <input type="text" id="reCAPTCHA" name="reCAPTCHA" placeholder="Введите символы выше" autoComplete="off"/>
                 <button type="button" onClick={()=>{check_reCAPTCHA(document.getElementById("reCAPTCHA").value)}}>Проверить</button>
             </div>
         </div>

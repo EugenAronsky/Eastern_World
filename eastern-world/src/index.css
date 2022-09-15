@@ -7,15 +7,12 @@ body {
 
 #goog-gt-tt, .skiptranslate{
 	display: none !important;
+	z-index: 0;
 }
 
 .goog-text-highlight{
 	box-shadow: none;
 	background-color: transparent;
-}
-
-header + div{
-	margin-top: 8.333vw;
 }
 
 * {

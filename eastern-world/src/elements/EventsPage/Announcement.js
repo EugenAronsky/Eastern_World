@@ -20,8 +20,8 @@ const Announcement = ({data}) =>{
                         <h2>{date}</h2>
                         <div className="Announcement-description">{UpdateManeger(summary)}</div>
                         <div className="buttons-box">
-                            <Button content = "РЕГИСТРАЦИЯ" width = "10.417vw" height = "2.083vw" target = "_blank" link={link}/>
-                            <Button content = "УЗНАТЬ БОЛЬШЕ" width = "10.417vw" height = "2.083vw" link={'AdditionalInfo'} change={data}/>
+                            <Button content = "РЕГИСТРАЦИЯ" width = "10.417vw" height = "2.083vw" target = "_blank" link={link} outside={true}/>
+                            <Button content = "УЗНАТЬ БОЛЬШЕ" width = "10.417vw" height = "2.083vw" link={'/events/info'} change={data}/>
                         </div>
                     </div>
                 </div>
@@ -34,8 +34,8 @@ const Announcement = ({data}) =>{
                     <div style={{backgroundImage: "url(" + picture.fields.file.url + ")"}}></div>
                     <div className="Announcement-description">{UpdateManeger(summary)}</div>
                     <div className="buttons-box">
-                        <Button content = "РЕГИСТРАЦИЯ" width = "40.625vw" height = "9.375vw" target = "_blank" link={link}/>
-                        <Button content = "УЗНАТЬ БОЛЬШЕ" width = "40.625vw" height = "9.375vw" link={'AdditionalInfo'} change={data}/>
+                        <Button content = "РЕГИСТРАЦИЯ" width = "40.625vw" height = "9.375vw" target = "_blank" link={link} outside={true}/>
+                        <Button content = "УЗНАТЬ БОЛЬШЕ" width = "40.625vw" height = "9.375vw" link={'/events/info'} change={data}/>
                     </div>
                 </div>
 

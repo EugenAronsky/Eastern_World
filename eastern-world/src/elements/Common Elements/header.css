@@ -150,7 +150,7 @@ header > nav > a:hover{
     background: rgba(51, 51, 51, 0.8);
     box-shadow: 0.104vw 0.104vw 1.042vw rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(1.042vw);
-    transition: 1s;
+    transition: .7s;
 }
 
 .burgerMenuClose{
@@ -165,7 +165,7 @@ header > nav > a:hover{
     background: rgba(51, 51, 51, 0.8);
     box-shadow: 0.104vw 0.104vw 1.042vw rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(1.042vw);
-    transition: 1s;
+    transition: .7s;
     opacity: 0;
 }
 
@@ -198,8 +198,8 @@ header > nav > a:hover{
 .show{
     opacity: 1;
     transition-property: opacity, color;
-    transition-delay: .8s, 0s;
-    transition-duration: .5s, 0.2s;
+    transition-delay: .4s, 0s;
+    transition-duration: .7s, 0.2s;
 }
 
 .burgerMenu > a:hover{
@@ -248,7 +248,7 @@ header > nav > a:hover{
     box-shadow: 0.104vw 0.104vw 1.042vw rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(1.042vw);
     overflow: hidden;
-    transition: 1s;
+    transition: .4s;
 
 }
 
@@ -257,7 +257,7 @@ header > nav > a:hover{
 }
 
 .langMenuClose{
-    transition-delay: 1s;
+    transition-delay: .4s;
     height: 0vw;
 }
 
@@ -271,9 +271,9 @@ header > nav > a:hover{
     font-family: 'Exo',sans-serif;
     font-style: normal;
     color: #ffffff;
-    transition-duration: .6s;
+    transition-duration: .2s;
     transition-property: opacity;
-    transition-delay: 1s;
+    transition-delay: .4s;
     cursor: pointer;
     opacity: 0;
 }
@@ -288,9 +288,9 @@ header > nav > a:hover{
 
 
 .langMenuClose > *{
-    transition-duration: .6s, .6s;
+    transition-duration: .2s, .2s;
     transition-property: color, opacity;
-    transition-delay: .0s, .6s;
+    transition-delay: .0s, .2s;
     opacity: 0;
 }
 

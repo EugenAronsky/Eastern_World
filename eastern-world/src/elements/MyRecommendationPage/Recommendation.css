@@ -25,7 +25,7 @@
     background-position: center;
     background-repeat: no-repeat;
     margin-right: 1.563vw;
-    word-wrap: pre-line;
+    white-space: pre-line;
 }
 
 .recommendation-title-page{

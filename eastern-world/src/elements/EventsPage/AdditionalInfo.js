@@ -7,6 +7,7 @@ import './AdditionalInfo.css';
 import { windowSize } from '../App.js';
 import { Player } from 'video-react';
 import "../../../../node_modules/video-react/dist/video-react.css"; 
+
 const AdditionalInfo = ({info}) => {
     const format = ["mp4", "webm", "ogg"];
     const {picture, title, description, date, report} = info;
@@ -15,7 +16,6 @@ const AdditionalInfo = ({info}) => {
     const type = report[selectedVidio].fields.file.url.split(".").slice(-1)[0];
     const memoUnpackDescription = useMemo(()=>UnpackDescriptionWithLinks(description), [description]);
     const vidio_box_container = report.map((element, key) => !format.includes(element.fields.file.url.split(".").slice(-1)[0]) ? <div key = {key} onClick={()=>setSelectedVidio(key)} className = {selectedVidio === key ? "active-vidio" : "unfocus-vidio"} style={{backgroundImage: `url(${element.fields.file.url})`}}></div> : <div key = {key} onClick={()=>setSelectedVidio(key)} className = {selectedVidio === key ? "active-vidio play" : "unfocus-vidio play"}><video className = {selectedVidio === key ? "active-vidio" : "unfocus-vidio"} style = {{objectFit: "cover"}} src = {element.fields.file.url}></video></div>);
-
     return(
         <>
             {screenWidth <= 540 ?
@@ -46,7 +46,7 @@ const AdditionalInfo = ({info}) => {
                     </div>
 
                     <div className="GoToRecommendationButton">
-                        <Button content = "ВЕРНУТЬСЯ" width = "40.625vw" height = "9.375vw" link={"EventsPage"}/>
+                        <Button content = "ВЕРНУТЬСЯ" width = "40.625vw" height = "9.375vw" link={"/events"}/>
                     </div>
                 </div>
                 :
@@ -79,7 +79,7 @@ const AdditionalInfo = ({info}) => {
                     </div>
 
                     <div className="GoToRecommendationButton">
-                        <Button content = "ВЕРНУТЬСЯ К АНОНСАМ" width = "21.875vw" height = "3.125vw" link={"EventsPage"}/>
+                        <Button content = "ВЕРНУТЬСЯ К АНОНСАМ" width = "21.875vw" height = "3.125vw" link={"/events"}/>
                     </div>
                 </div>
             }

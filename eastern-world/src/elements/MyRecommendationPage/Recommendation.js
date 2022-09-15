@@ -22,7 +22,7 @@ const Recommendation = ({info}) =>{
                     </div>
 
                     <div className="GoToRecommendationButton">
-                        <Button content = "ВЕРНУТЬСЯ" width = "40.625vw" height = "9.375vw" link={"MyRecommendationPage"}/>
+                        <Button content = "ВЕРНУТЬСЯ" width = "40.625vw" height = "9.375vw" link={"/recommendation"}/>
                     </div>
                 </div>
                 :
@@ -35,7 +35,7 @@ const Recommendation = ({info}) =>{
                     </div>
 
                     <div className="GoToRecommendationButton">
-                        <Button content = "ВЕРНУТЬСЯ К РЕКОМЕНДАЦИЯМ" width = "21.875vw" height = "3.125vw" link={"MyRecommendationPage"}/>
+                        <Button content = "ВЕРНУТЬСЯ К РЕКОМЕНДАЦИЯМ" width = "21.875vw" height = "3.125vw" link={"/recommendation"}/>
                     </div>
                 </div>
             }

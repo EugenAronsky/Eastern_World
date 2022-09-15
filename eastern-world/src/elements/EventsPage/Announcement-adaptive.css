@@ -62,7 +62,7 @@
         height: fit-content;
     }
 
-    .buttons-box > .button > div{
+    .buttons-box > .button{
         font-size: 3.125vw;
         line-height: 3.538vw;
     }

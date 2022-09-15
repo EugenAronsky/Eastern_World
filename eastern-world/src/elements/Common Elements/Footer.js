@@ -6,7 +6,7 @@ import "./Footer_Adaptive.css"
 
 
 const Footer = ({upDate}) =>{    
-    let {copyright, mail, termsOfUse} = upDate;
+    const {copyright, my_mail, termsOfUse} = upDate;
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
     window.addEventListener("resize", ()=>{
         setScreenWidth(window.innerWidth)
@@ -17,13 +17,13 @@ const Footer = ({upDate}) =>{
                 <div className='upSide'>
                     <div>
                         <span>Условия пользования</span>
-                        {screenWidth <= 540 ? <Button content="ПРОЧЕСТЬ" width = "34.375vw" height = "9.162vw" link={termsOfUse}/> : <Button content="ПРОЧЕСТЬ" width = "12.500vw" height = "3.125vw" link={termsOfUse}/>}
+                        {screenWidth <= 540 ? <Button content="ПРОЧЕСТЬ" width = "34.375vw" height = "9.162vw" link={termsOfUse} outside={true}/> : <Button content="ПРОЧЕСТЬ" width = "12.500vw" height = "3.125vw" link={termsOfUse} outside={true}/>}
                     </div>
                     <div className='secondEl'>
                         <span>Контакты</span>
-                        <div onClick={ () => window.open(`mailto:${mail}`) }>
+                        <div onClick={ () => window.open(`mailto:${my_mail}`) }>
                             <div id = 'postIcon'></div>
-                            <span>{mail}</span>
+                            <span>{my_mail}</span>
                         </div>
                     </div>
                 </div>

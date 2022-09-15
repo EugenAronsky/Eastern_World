@@ -28,6 +28,26 @@
     height: 0.052vw;
 }
 
+.full-descripton > * > a > *{
+    position: relative ; 
+    font-family: 'Georgia', sans-serif;
+    font-weight: 400;
+    font-size: 1.354vw;
+    line-height: 130%;
+    text-align: justify;
+    color: #D6BA8D;
+}
+
+.full-descripton > * > a > *::after{
+    left: 0;
+    bottom: 0;
+    content: '';
+    position: absolute;
+    width: 100%;
+    background: #D6BA8D;
+    height: 0.052vw;
+}
+
 @media only screen and (max-width: 540px) {
     .full-descripton{
         font-family: 'Georgia', sans-serif;
@@ -40,6 +60,16 @@
     }
 
     .full-descripton > a{
+        position: relative;
+        font-family: 'Georgia', sans-serif;
+        font-weight: 400;
+        font-size: 3.750vw;
+        line-height: 130%;
+        text-align: left;
+        color: #D6BA8D;
+    }
+
+    .full-descripton > * > a *{
         position: relative;
         font-family: 'Georgia', sans-serif;
         font-weight: 400;

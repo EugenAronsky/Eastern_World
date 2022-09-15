@@ -30,7 +30,7 @@ const Portfolio = ({upDate}) =>{
             </div>
 
             <div className = "portfolio-button">
-                {screenWidth <= 540 ? <Button content = "УЗНАТЬ БОЛЬШЕ" width = "40.625vw" height = "9.375vw" link={'PortfolioPage'}/> : <Button content = "УЗНАТЬ БОЛЬШЕ" width = "13.542vw" height = "3.125vw" link={'PortfolioPage'}/>}
+                {screenWidth <= 540 ? <Button content = "УЗНАТЬ БОЛЬШЕ" width = "40.625vw" height = "9.375vw" link={'/portfolio'}/> : <Button content = "УЗНАТЬ БОЛЬШЕ" width = "13.542vw" height = "3.125vw" link={'/portfolio'}/>}
             </div>
         </div>
     );

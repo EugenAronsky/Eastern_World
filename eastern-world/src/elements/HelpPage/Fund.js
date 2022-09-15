@@ -12,7 +12,7 @@ const Fund = ({info}) =>{
         <div className="Fond-Box">
             <h1>{name}</h1>
             <div>
-                {screenWidth <= 540 ? <Button content = "ВНЕСТИ ПОЖЕРТВОВАНИЕ" width = "75vw" height = "9.375vw" link={link} target="_blank"/> : <Button content = "ВНЕСТИ ПОЖЕРТВОВАНИЕ" width = "20.417vw" height = "3.125vw" link={link} target="_blank"/>}
+                {screenWidth <= 540 ? <Button content = "ВНЕСТИ ПОЖЕРТВОВАНИЕ" width = "75vw" height = "9.375vw" link={link} target="_blank" outside={true}/> : <Button content = "ВНЕСТИ ПОЖЕРТВОВАНИЕ" width = "20.417vw" height = "3.125vw" link={link} target="_blank" outside={true}/>}
             </div>
         </div>
     );

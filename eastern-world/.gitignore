@@ -12,7 +12,7 @@
 /build
 
 # folder
-/Server
+/Server/
 
 # misc
 .DS_Store

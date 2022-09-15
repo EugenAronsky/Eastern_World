@@ -11,8 +11,8 @@
 # production
 /build
 
-# api keys
-../Server
+# folder
+/Server
 
 # misc
 .DS_Store

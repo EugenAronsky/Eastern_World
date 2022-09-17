@@ -2,6 +2,7 @@
     width: 100%;
     display: flex;
     height: 35.417vw;
+    position: relative;
     justify-content: center;
 }
 
@@ -106,10 +107,18 @@
 }
 
 .q-slider > *{
+    width: 100%;
     display: flex;
     position: absolute;
     transition: 1s;
 }
+
+.q-slider > * > *{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
 
 .q-slider > *::-webkit-scrollbar{
     width: 0vw;

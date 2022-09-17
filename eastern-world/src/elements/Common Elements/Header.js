@@ -85,7 +85,7 @@ const Header = ({upDate}) => {
                         <Link to="/recommendation" className={isActive ? currentPage === "MyRecommendationPage" ? 'show activeBurger A-line' : 'show A-line' : 'hide'}>РЕКОМЕНДАЦИИ</Link>
                         <Link to="/questions" className={isActive ? currentPage === "QuestionsPage" ? 'show activeBurger A-line' : 'show A-line' : 'hide'}>ВОПРОС/ОТВЕТ</Link>
                         <Link to="/help" className={isActive ? currentPage === "HelpPage" ? 'show activeBurger A-line' : 'show A-line' : 'hide'}>{help_title}</Link>
-                        <a className={isActive ? currentPage === "ContactsPage" ? 'show activeBurger A-line' : 'show A-line' : 'hide'} onClick={()=>{window.scrollTo({top: document.body.scrollHeight, behavior: "smooth"})}}>КОНТАКТЫ</a>
+                        <a className={isActive ? currentPage === "ContactsPage" ? 'show activeBurger A-line' : 'show A-line' : 'hide'} onClick={()=>{document.getElementById("root").scrollTo({top: document.getElementById("root").scrollHeight, behavior: "smooth"})}}>КОНТАКТЫ</a>
                         <a href="https://t.me/eastern_world" className={isActive ? 'show tg' : 'hide tg'} target="blank"></a>
                     </nav>  
                 </div>

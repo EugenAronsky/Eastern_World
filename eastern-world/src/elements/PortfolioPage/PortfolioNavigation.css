@@ -50,6 +50,7 @@
     width: 13.438vw;
     height: 3.750vw;
     align-items: center;
+    position: relative;
     background: #212121;
 }
 
@@ -116,7 +117,6 @@
     display: flex;
     width: 13.438vw;
     position: absolute;
-    margin-top: 11.458vw;
     align-items: center;
     justify-content: flex-end;
     background: #212121;

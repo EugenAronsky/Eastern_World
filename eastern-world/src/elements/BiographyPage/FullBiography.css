@@ -1,6 +1,7 @@
 .FullBiography{
     width: 100vw;
     display: flex;
+    position: relative;
     padding-top: 3.125vw;
     padding-bottom: 3.125vw;
     justify-content: center;

@@ -1,0 +1,65 @@
+html[lang='iw']{
+    transform: rotateY(-180deg);
+}
+
+html[lang='iw'] font{
+    direction: rtl;
+    display: inline-block;
+	transform: rotateY(-180deg);
+}
+
+html[lang='iw'] font > font{
+    display: unset;
+    direction: rtl;
+    transform: unset;
+}
+
+html[lang='iw'] #lang_list, html[lang='iw'] .langIcon, html[lang='iw'] .logo, html[lang='iw'] .works-pages, html[lang='iw'] .Loader, html[lang='iw'] .CommentIconBox, html[lang='iw'] #canv{
+    transform: rotateY(-180deg);
+}
+
+html[lang='iw'] .slider_date{
+    display: block;
+    direction: rtl;
+    transform: rotateY(-180deg);
+}
+
+html[lang='iw'] .works-pages{
+    direction: rtl;
+}
+
+html[lang='iw'] .full-descripton{
+    direction: rtl;
+}
+
+html[lang='iw'] .full-descripton{
+    direction: rtl;
+}
+
+html[lang='iw'] .full-descripton > font{
+    display: unset;
+}
+
+html[lang='iw'] .full-descripton > font > a > font{
+    display: unset;
+    transform: rotateY(-180deg);
+}
+
+html[lang='iw'] .recommendation-addition > font{
+    display: unset;
+}
+
+html[lang='iw'] .recommendation-title-page > font{
+    display: unset;
+}
+
+html[lang='iw'] .recommendation-image{
+    float: right;
+    margin-left: 1.563vw;
+    margin-right: unset;
+}
+
+html[lang='iw'] .Recommendation-container{
+    transform: rotateY(-180deg);
+    direction: rtl;
+}

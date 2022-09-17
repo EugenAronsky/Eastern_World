@@ -3,7 +3,7 @@ import "./ErrorPage.css"
 
 const Error = () =>{
     return (
-        <div className='Error'>404</div>
+        <div style={{transform: "rotateX(-180deg)"}} className='Error'>40<span style={{transform: "rotateY(-180deg)"}}>4</span></div>
     )
 }
 

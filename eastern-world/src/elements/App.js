@@ -17,14 +17,18 @@ import Inquire from './QuestionsPage/Inquire';
 import Answer from './QuestionsPage/Answer';
 import Ask from './QuestionsPage/Ask';
 import "./App.css"
-// import translate from "../../../node_modules/translate"
+import './RTL.css';
 
 export const ShareData = createContext();
 export const windowSize = createContext();
 
+const rtl = () =>{
+    document.getElementById("body").style.transform = `rotateY(180deg)`;
+}
+
 const App = ({Data}) => {
     const [ServerData, setServerData] = useState( Data );
-
+    // localStorage.getItem("language") === "HA" ? rtl() : document.getElementById("body").style.transform = ``
     // const startTranslate = async() => { 
     //     return await Promise.all(Object.values(ServerData).map(async(object, index)=>{
 

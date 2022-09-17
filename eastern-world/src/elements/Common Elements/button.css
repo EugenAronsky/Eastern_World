@@ -17,6 +17,16 @@
     text-align: center;
 }
 
+.button > font > font{
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size:  0.938vw;
+    letter-spacing: 0.08em;
+    color: #FFFFFF;
+    text-align: center;
+}
+
 .button:hover{
     color: #333333;
     background: #D6BA8D;
@@ -31,4 +41,9 @@
     .button{
         font-size: 3.125vw;
     }
+
+    .button > font > font{
+        font-size: 3.125vw;
+    }
+    
 }

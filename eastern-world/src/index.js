@@ -31,7 +31,7 @@ const GetData = async() => {
         else{
           root.render(
             <React.Fragment>
-              <App Data ={response.data.items}/>
+                <App Data ={response.data.items}/>
             </React.Fragment>
           );
         }

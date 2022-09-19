@@ -63,3 +63,7 @@ html[lang='iw'] .Recommendation-container{
     transform: rotateY(-180deg);
     direction: rtl;
 }
+
+/* html[lang='iw'] .burgerMenuIcon{
+    transform: rotateY(180deg);
+} */

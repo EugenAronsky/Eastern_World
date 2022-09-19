@@ -103,7 +103,7 @@
 }
 
 #custom-track{
-    height: 30%;
+    min-height: 2%;
     width: 0.417vw;
     cursor: pointer;
     transition: .2s;

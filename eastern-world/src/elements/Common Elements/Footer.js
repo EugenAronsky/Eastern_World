@@ -18,7 +18,7 @@ const Footer = ({upDate}) =>{
                         {screenWidth <= 540 ? <Button content="ПРОЧЕСТЬ" width = "34.375vw" height = "9.162vw" link={termsOfUse} outside={true} target="_blank"/> : <Button content="ПРОЧЕСТЬ" width = "12.500vw" height = "3.125vw" link={termsOfUse} outside={true} target="_blank"/>}
                     </div>
                     <div className='secondEl'>
-                        <span>Контакты</span>
+                        <span translate='no'>{localStorage.getItem("language") === "HA" ? "צור קשר" : localStorage.getItem("language") === "EN" ? "Contacts" : "Контакты"}</span>
                         <div onClick={ () => window.open(`mailto:${my_mail}`) }>
                             <div id = 'postIcon'></div>
                             <span>{my_mail}</span>

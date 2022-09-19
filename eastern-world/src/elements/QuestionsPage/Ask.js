@@ -22,12 +22,20 @@ const Ask = ({props}) => {
     const customScroll = (target) =>{
         setScrollTargetInfo(target); 
         set_scroll_space( target.scrollHeight - target.clientHeight );
-        set_track_height((current) => current = document.getElementById("comment").getBoundingClientRect().height - scroll_space + "px")
-        document.getElementById("custom-track").style.height = track_height;
+        set_track_height((current) => {
+            if(current > 25)
+            current = document.getElementById("comment").getBoundingClientRect().height - scroll_space
+        })
+        document.getElementById("custom-track").style.height = document.getElementById("comment").getBoundingClientRect().height - target.scrollHeight - target.clientHeight  + "px";
     }
 
-    const setTrackPosition = () =>{
-        
+    const setTrackPosition = (target) =>{
+        if(!grab){
+            setSrollPercent(target.scrollTop * 100 / (target.scrollHeight - target.clientHeight))
+            const customScrollBar = document.getElementById("customScrollBar").getBoundingClientRect();
+            set_current_track_position(customScrollBar.height * srollPercent / 100);
+            document.getElementById("custom-track").style.transform = `translateY(${customScrollBar.height * (target.scrollTop * 100 / (target.scrollHeight - target.clientHeight)) / 100 }px)`;
+        }
     }
 
     const mouseUp = (event) => {
@@ -73,9 +81,6 @@ const Ask = ({props}) => {
             document.getElementById("comment").scrollTo({
                 top: scrollToValue,
             })
-        }
-        else{
-            
         }
     }
 

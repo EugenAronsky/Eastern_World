@@ -23,7 +23,7 @@ const SliderCard = ({info}) =>{
             <div className="SmallText">{UnpackDescription(intro)}</div>
                 {screenWidth <= 540 ? <div className ="slidButton"><Button content="ПРОЧЕСТЬ" width = "37.500vw" height = "9.375vw"/></div> : <div className ="slidButton"><Button content="ПРОЧЕСТЬ" width = "12.500vw" height = "3.125vw"/></div>}
             <div className="SliderFooter">
-                <div className="Author">Влада Гольдштейн</div>
+                <div className="Author" translate="no" >{localStorage.getItem("language") === "HA" ? "ולדה גולדשטיין" : localStorage.getItem("language") === "EN" ? "Vlada Goldstein" : "Влада Гольдштейн"}</div>
                 <div className="published-date">Публикация датируется <span className="slider_date" translate="no">{' ' + newDate.join('.')}</span></div>
                 <div className="publisher">Источник:<br/><a href={link}>{link}</a></div>
             </div> 

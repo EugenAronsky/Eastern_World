@@ -32,7 +32,7 @@ const FullBiography = ({upDate}) =>{
                     <div className='Bio-portret' style={portrait.fields.file.url === "default" ? {} : {backgroundImage : "url(" + portrait.fields.file.url +")" }}></div>
                     <div className='Bio-description-box'>
                         <div className='Bio-description'>
-                            <h1>{author}</h1>
+                            <h1 translate="no" >{localStorage.getItem("language") === "HA" ? "ולדה גולדשטיין" : localStorage.getItem("language") === "EN" ? "Vlada Goldstein" : "Влада Гольдштейн"}</h1>
                             <h2>{profession}</h2>
                             <p>{typeof bio_description !== 'string' ? UnpackDescription(bio_description) : bio_description}</p>   
                         </div>

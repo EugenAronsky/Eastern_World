@@ -42,14 +42,23 @@ const Header = ({upDate}) => {
         })
     },[])
 
+    const scrollToTop = (pathname) => {
+        if(window.location.pathname === pathname){
+            document.getElementById("root").scrollTo({top: 0, behavior: "smooth"})
+        }
+        else{
+            document.getElementById("root").scrollTo({top: 0, behavior: "auto"})
+        }
+    }
+
     return (
         <header>
-            <Link to="/" className = 'logo'></Link>
+            <Link to="/" className = 'logo' onClick={()=>{scrollToTop('/')}}></Link>
             <nav>
-                <Link to="/" className = {currentPage === "HomePage" ? 'active' : ''}>ГЛАВНАЯ</Link>
-                <Link to="/biography" className = {currentPage === "BiographyPage" ? 'active' : ''}>БИОГРАФИЯ</Link>
-                <Link to="/portfolio" className = {currentPage === "PortfolioPage" ? 'active' : ''}>ПОРТФОЛИО</Link>
-                <Link to="/events" className = {currentPage === "EventsPage" ? 'active' : ''}>МЕРОПРИЯТИЯ</Link>
+                <Link to="/" onClick={()=>{scrollToTop('/')}} className = {currentPage === "HomePage" ? 'active' : ''}>ГЛАВНАЯ</Link>
+                <Link to="/biography" onClick={()=>{scrollToTop('/biography')}} className = {currentPage === "BiographyPage" ? 'active' : ''}>БИОГРАФИЯ</Link>
+                <Link to="/portfolio" onClick={()=>{scrollToTop('/portfolio')}} className = {currentPage === "PortfolioPage" ? 'active' : ''}>ПОРТФОЛИО</Link>
+                <Link to="/events" onClick={()=>{scrollToTop('/events')}} className = {currentPage === "EventsPage" ? 'active' : ''}>МЕРОПРИЯТИЯ</Link>
             </nav>
             <div className = 'additional_options'>
                 <div className='iconBox'>
@@ -79,13 +88,13 @@ const Header = ({upDate}) => {
                             <Link to="/search" className='Icon searchIcon'/>
                             <div className='Icon burgerMenuIcon' onClick={handleClick}></div>
                         </div>
-                        <Link to="/biography" className={isActive ? currentPage === "BiographyPage" ? 'show activeBurger' : 'show' : 'hide'}>БИОГРАФИЯ</Link>
-                        <Link to="/portfolio" className={isActive ? currentPage === "PortfolioPage" ? 'show activeBurger A-line' : 'show A-line' : 'hide'}>ПОРТФОЛИО</Link>
-                        <Link to="/events" className={isActive ? currentPage === "EventsPage" ? 'show activeBurger A-line' : 'show A-line' : 'hide'}>МЕРОПРИЯТИЯ</Link>
-                        <Link to="/recommendation" className={isActive ? currentPage === "MyRecommendationPage" ? 'show activeBurger A-line' : 'show A-line' : 'hide'}>РЕКОМЕНДАЦИИ</Link>
-                        <Link to="/questions" className={isActive ? currentPage === "QuestionsPage" ? 'show activeBurger A-line' : 'show A-line' : 'hide'}>ВОПРОС/ОТВЕТ</Link>
-                        <Link to="/help" className={isActive ? currentPage === "HelpPage" ? 'show activeBurger A-line' : 'show A-line' : 'hide'}>{help_title}</Link>
-                        <a className={isActive ? currentPage === "ContactsPage" ? 'show activeBurger A-line' : 'show A-line' : 'hide'} onClick={()=>{document.getElementById("root").scrollTo({top: document.getElementById("root").scrollHeight, behavior: "smooth"})}}>КОНТАКТЫ</a>
+                        <Link to="/biography" onClick={()=>{scrollToTop('/biography')}} className={isActive ? currentPage === "BiographyPage" ? 'show activeBurger' : 'show' : 'hide'}>БИОГРАФИЯ</Link>
+                        <Link to="/portfolio" onClick={()=>{scrollToTop('/portfolio')}} className={isActive ? currentPage === "PortfolioPage" ? 'show activeBurger A-line' : 'show A-line' : 'hide'}>ПОРТФОЛИО</Link>
+                        <Link to="/events" onClick={()=>{scrollToTop('/events')}} className={isActive ? currentPage === "EventsPage" ? 'show activeBurger A-line' : 'show A-line' : 'hide'}>МЕРОПРИЯТИЯ</Link>
+                        <Link to="/recommendation" onClick={()=>{scrollToTop('/recommendation')}} className={isActive ? currentPage === "MyRecommendationPage" ? 'show activeBurger A-line' : 'show A-line' : 'hide'}>РЕКОМЕНДАЦИИ</Link>
+                        <Link to="/questions" onClick={()=>{scrollToTop('/questions')}} className={isActive ? currentPage === "QuestionsPage" ? 'show activeBurger A-line' : 'show A-line' : 'hide'}>ВОПРОС/ОТВЕТ</Link>
+                        <Link to="/help" onClick={()=>{scrollToTop('/help')}} className={isActive ? currentPage === "HelpPage" ? 'show activeBurger A-line' : 'show A-line' : 'hide'}>{help_title}</Link>
+                        <a className={isActive ? currentPage === "ContactsPage" ? 'show activeBurger A-line' : 'show A-line' : 'hide'} onClick={()=>{document.getElementById("root").scrollTo({top: document.getElementById("root").scrollHeight, behavior: "smooth"}); handleClick()}}>КОНТАКТЫ</a>
                         <a href="https://t.me/eastern_world" className={isActive ? 'show tg' : 'hide tg'} target="blank"></a>
                     </nav>  
                 </div>

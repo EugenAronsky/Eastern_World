@@ -45,7 +45,7 @@ const Answer = ({props}) => {
                         <div className="CommentBox">
                             <div className="CommentIconBox" style={{backgroundImage: `url(${portrait.fields.file.url})`}}/>
                             <div className="CommentContent">
-                                <h1>Влада Гольдштейн</h1>
+                                <h1 translate='no' >{localStorage.getItem("language") === "HA" ? "ולדה גולדשטיין" : localStorage.getItem("language") === "EN" ? "Vlada Goldstein" : "Влада Гольдштейн"}</h1>
                                 <h2>{UpdateManeger(answer)}</h2>
                                 <h3>{answer_date}</h3>
                             </div>
@@ -55,7 +55,7 @@ const Answer = ({props}) => {
                             <div className="CommentBoxLine">
                                 <div className="CommentIconBox" style={{backgroundImage: `url(${portrait.fields.file.url})`}}/>
                                 <div className="CommentContent">
-                                    <h1>Влада Гольдштейн</h1>
+                                    <h1 translate='no' >{localStorage.getItem("language") === "HA" ? "ולדה גולדשטיין" : localStorage.getItem("language") === "EN" ? "Vlada Goldstein" : "Влада Гольдштейн"}</h1>
                                     <h3>{answer_date}</h3>
                                 </div>
                             </div>

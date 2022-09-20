@@ -5,6 +5,7 @@
     "config": "^3.3.8",
     "contentful": "^9.1.34",
     "contentful-management": "^10.13.0",
+    "cors": "^2.8.5",
     "express": "^4.18.1",
     "express-validator": "^6.14.2",
     "http-cors": "^2.0.0",

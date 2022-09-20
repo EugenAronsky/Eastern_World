@@ -14,9 +14,19 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 );
 
 const GetData = async() => {
-  if(window.location.pathname !== "/") window.location.pathname = "/";
+  switch(window.location.pathname){
+    case "/events/info":
+      window.location.pathname = "/events";
+    break;
+    case "/recommendation/info":
+      window.location.pathname = "/recommendation";
+    break;
+    case "/questions/answer":
+      window.location.pathname = "/questions";
+    break;
+  }
   try{
-    await axios.post("http://localhost:8000/api/getData")
+    await axios.post("http://10.0.0.6:8000/api/getData")
     .then((response)=>{
       
       setTimeout(()=>{

@@ -11,11 +11,12 @@ body {
 }
 
 .goog-text-highlight{
-	box-shadow: none;
-	background-color: transparent;
+	box-shadow: none !important;
+	background-color: transparent !important;
 }
 
 * {
+	-webkit-tap-highlight-color: transparent;
 	text-decoration: none;
 	vertical-align: baseline;
 	font-weight: inherit;

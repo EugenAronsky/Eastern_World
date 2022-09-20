@@ -124,14 +124,14 @@ const Ask = ({props}) => {
     
     window.requestAnimationFrame(trackMove);
         
-    const sendQuestion  = async() =>{
+    const sendQuestion = async() =>{
         const textarea = document.getElementById("comment");
         const sendButton = document.getElementById("btn_send");
         if(textarea.value !== ''){
             sendButton.style.pointerEvents = "none";
             const today = new Date();
             const date = `${today.getDate()} ${(months[today.getMonth()])} ${today.getFullYear()}`;
-            await axios.post("http://localhost:8000/api/addNewComment", {
+            await axios.post("http://10.0.0.6:8000/api/addNewComment", {
                 firstName: questionData.firstName.value,
                 lastName: questionData.lastName.value,
                 mail: questionData.mail.value,

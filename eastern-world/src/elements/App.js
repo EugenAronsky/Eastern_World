@@ -22,10 +22,6 @@ import './RTL.css';
 export const ShareData = createContext();
 export const windowSize = createContext();
 
-const rtl = () =>{
-    document.getElementById("body").style.transform = `rotateY(180deg)`;
-}
-
 const App = ({Data}) => {
     const [ServerData, setServerData] = useState( Data );
     // localStorage.getItem("language") === "HA" ? rtl() : document.getElementById("body").style.transform = ``
@@ -64,9 +60,11 @@ const App = ({Data}) => {
     const [previousState, setPreviousState] = useState(["HomePage"]);
     const [questionData, setQuestionData] = useState(null);
 
-    window.addEventListener("resize", ()=>{
-        setScreenWidth(window.innerWidth);
-    });
+    useEffect(()=>{
+        window.addEventListener("resize", ()=>{
+            setScreenWidth(window.innerWidth);
+        });
+    },[])
 
     const changePage = (page) => {
         if(localStorage.getItem("Current_Page") !== page){
@@ -96,7 +94,7 @@ const App = ({Data}) => {
         setQuestionData: setQuestionData,
         setPreviousState: (array)=>setPreviousState(array.slice(0, -1)),
     }
-
+    console.clear();
     return (
         <Router>
             <ShareData.Provider value = {[ServerData, changePage, changeWorkPageInfo]}>

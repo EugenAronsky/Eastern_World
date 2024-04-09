@@ -26,7 +26,7 @@ const GetData = async() => {
     break;
   }
   try{
-    await axios.post("http://10.0.0.6:8000/api/getData")
+    await axios.post("http://192.168.239.177:3000/api/getData")
     .then((response)=>{
       
       setTimeout(()=>{
